@@ -1,0 +1,23 @@
+body{
+    box-sizing: border-box;
+    padding-left: 10px;
+    padding-bottom: 100px; /*set this to the height of your footer */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #cecece57;
+ }
+ 
+
+footer{
+   position: absolute;
+   margin-top: auto; 
+   bottom: 10;
+   left: 0;
+   width: 100%;
+   background-color: #f2f2f2; /* change this to your desired background color*/
+   padding: 10px;
+   text-align: center; 
+   overflow: hidden;
+   box-sizing: border-box;
+}
