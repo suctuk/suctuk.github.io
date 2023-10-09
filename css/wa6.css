@@ -24,12 +24,11 @@
     bottom: 25px;
     right: 0px;
     background-color: rgba(128,128,128,0.6);
-
 }
 
 p {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 40px;
+    font-size: 20px;
     text-align: center;
 }
 
