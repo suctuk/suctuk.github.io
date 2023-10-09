@@ -24,11 +24,18 @@
     bottom: 25px;
     right: 0px;
     background-color: rgba(128,128,128,0.6);
+    border: 5px dotted forestgreen;
+    text-shadow: 1px 1px 1px black;
+    background-image: url("../img/prairieDogs.jpg");
+    /* felt like being janky and wanted to see what this does */
+}
+.overlay2 p{
+    color: white;
 }
 
 p {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 20px;
+    font-size: 40px;
     text-align: center;
 }
 
