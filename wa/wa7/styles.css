@@ -66,12 +66,12 @@ body {
   }
 
   @media (max-width: 500px){
-    .photos {
+    .photos, .grid, ul.nav {
       display: grid;
       grid-template-columns: 100%;
     }
-    .grid {
-      display: grid;
-      grid-template-columns: 100%;
+    .grid{
+      display: flex;
+      flex-direction: column;
     }
   }
