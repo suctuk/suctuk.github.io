@@ -35,4 +35,7 @@ body{
         margin-top: 0%;
         width: 100%;
     }
+
+    from {top:15vw;
+        left:0vw}
 }
