@@ -46,14 +46,3 @@ img:hover {
     transition: all 8s ease-in;
 
 }
-#red-ball{
-    background-color: #BAABBD;
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    position: absolute;
-    right:1vw;
-    top:0;
-    transition: all s ease-in;
-    /* This was me messing around and being curious, did something interesting */
-}
