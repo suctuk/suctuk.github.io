@@ -42,7 +42,6 @@ nav a {
 
 .grid {
   margin: 0 auto;
-  padding: 0 20px;
   /* max-width: 980px; */
   display: grid;
   place-items: center;
@@ -56,8 +55,9 @@ nav a {
 
 
 .banner img{
-    max-width: 100%; /* Ensure the logo doesn't exceed the container width */
-    max-height: 100%; /* Ensure the logo doesn't exceed the container height */
+    max-width: 110%;
+    max-height: 110%;
+    padding-left: 0vw;
 }
 
 .intro {

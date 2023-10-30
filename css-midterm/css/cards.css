@@ -6,8 +6,14 @@
 
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  transition: 0.3s;
-  border-radius: 5px; /* 5px rounded corners */
+  transition: 0.5s;
+  border-radius: 20px; /* 5px rounded corners */
   width: 400px;
-  padding: 1vw
+  padding: 1vw;
+  margin-top: 1.5vw;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  transition: transform 0.2s ease;
 }
