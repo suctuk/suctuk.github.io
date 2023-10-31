@@ -1,9 +1,3 @@
-/* #events {
-  background-color: aquamarine;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  transition: 0.3s;
-} */
-
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.5s;
@@ -11,6 +5,8 @@
   width: 400px;
   padding: 1vw;
   margin-top: 1.5vw;
+  background-color: #8d99ae;
+  color: #2b2d42;
 }
 
 .card:hover {

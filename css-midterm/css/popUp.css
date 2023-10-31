@@ -1,22 +1,24 @@
 .banner {
   position: relative;
-
-
+  overflow: hidden;
 }
+
+/* Following lines adapted from ChatGPT output */
 .summary {
   padding: 1vw;
   position: absolute;
   overflow: visible;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 90%;
+  height: 90%;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(43, 45, 66, 0.7);
+  color: #2b2d42;
   color: #fff;
-  opacity: 0; 
+  opacity: 0;
   transition: opacity 0.3s;
 }
 
@@ -24,49 +26,89 @@
   opacity: 1;
 }
 
+/* Following lines Adapted from: https://makemychance.com/show-more-show-less-using-css/?expand_article=1 */
 
-.summary {
-  padding: 1vw;
-  position: absolute;
-  overflow: visible;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: rgba(0, 0, 0, 0.7);
-  color: #fff;
-  opacity: 0; 
-  transition: opacity 0.3s;
-}
-
-.hidden {
+.hidden1,
+.hidden2,
+.hidden3,
+.hidden4,
+.hidden5,
+.hidden6,
+.hidden7,
+.hidden8,
+.hidden9 {
   display: none;
-  position: absolute;
-  background-color: #333;
-  color: #fff;
-  padding: 10px;
-  border-radius: 5px;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-  max-width: 200px;
+  overflow: hidden;
 }
 
-/* Style the button */
-button {
-  background-color: #007BFF;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
+.more1,
+.more2,
+.more3,
+.more4,
+.more5,
+.more6,
+.more7,
+.more8,
+.more9 {
+  display: block;
   cursor: pointer;
 }
 
-/* Show the pop-up text when the button is clicked */
-button:focus + #popupText {
+.less1,
+.less2,
+.less3,
+.less4,
+.less5,
+.less6,
+.less7,
+.less8,
+.less9 {
+  display: none;
+}
+
+#moreCheckbox1,
+#moreCheckbox2,
+#moreCheckbox3,
+#moreCheckbox4,
+#moreCheckbox5,
+#moreCheckbox6,
+#moreCheckbox7,
+#moreCheckbox8,
+#moreCheckbox9 {
+  display: none;
+}
+#moreCheckbox1:checked ~ .hidden1,
+#moreCheckbox2:checked ~ .hidden2,
+#moreCheckbox3:checked ~ .hidden3,
+#moreCheckbox4:checked ~ .hidden4,
+#moreCheckbox5:checked ~ .hidden5,
+#moreCheckbox6:checked ~ .hidden6,
+#moreCheckbox7:checked ~ .hidden7,
+#moreCheckbox8:checked ~ .hidden8,
+#moreCheckbox9:checked ~ .hidden9 {
+  display: inline;
+}
+
+#moreCheckbox1:checked ~ .more1,
+#moreCheckbox2:checked ~ .more2,
+#moreCheckbox3:checked ~ .more3,
+#moreCheckbox4:checked ~ .more4,
+#moreCheckbox5:checked ~ .more5,
+#moreCheckbox6:checked ~ .more6,
+#moreCheckbox7:checked ~ .more7,
+#moreCheckbox8:checked ~ .more8,
+#moreCheckbox9:checked ~ .more9 {
+  display: none;
+}
+
+#moreCheckbox1:checked ~ .less1,
+#moreCheckbox2:checked ~ .less2,
+#moreCheckbox3:checked ~ .less3,
+#moreCheckbox4:checked ~ .less4,
+#moreCheckbox5:checked ~ .less5,
+#moreCheckbox6:checked ~ .less6,
+#moreCheckbox7:checked ~ .less7,
+#moreCheckbox8:checked ~ .less8,
+#moreCheckbox9:checked ~ .less9 {
   display: block;
-  top: 100%; /* Position the pop-up below the button */
-  left: 50%; /* Center it horizontally relative to the button */
-  transform: translateX(-50%); /* Center it precisely */
 }

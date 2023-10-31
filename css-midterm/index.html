@@ -2,17 +2,18 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="./css/style.css" />
-  <link rel="stylesheet" href="./css/popUp.css" />
-  <link rel="stylesheet" href="./css/cards.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/popUp.css">
+  <link rel="stylesheet" href="./css/cards.css">
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300;400&display=swap" rel="stylesheet">
   <title>Colorado Symphony</title>
 </head>
 
 <body>
   <div class="logo">
-    <img src="./img/cosymphony-black.jpg" alt="Colorado Symphony Logo" style="height: 10vw" />
+    <img src="./img/cosymphony-black.jpg" alt="Colorado Symphony Logo" style="height: 10vw">
   </div>
 
   <nav>
@@ -21,10 +22,10 @@
         <a href="">Home</a>
       </li>
       <li>
-        <a href="">About us</a>
+        <a href="">About</a>
       </li>
       <li>
-        <a href="">Our history</a>
+        <a href="">History</a>
       </li>
       <li>
         <a href="">Contacts</a>
@@ -41,7 +42,7 @@
       </h4>
     </div>
     <div class="banner">
-      <img src="./img/piano.jpg" alt="photo of hands on piano" />
+      <img src="./img/piano.jpg" alt="photo of hands on piano">
       <div class="summary">
         <p>
           We're delighted to present to you a season brimming with extraordinary
@@ -59,8 +60,11 @@
     <div class="card" id="event-card-1">
       <h2>Vivaldi's The Four Seasons</h2>
       <h3>OCT14-16 FRI-SAT 7:30 SUN 1:00</h3>
-      <button id="popupButton">Event Summary</button>
-      <p class="hidden" id="popupText">
+      <label for="moreCheckbox1" class="more1">Event Summary</label>
+
+      <input type="checkbox" id="moreCheckbox1">
+      <p class="hidden1" id="popupText1">
+        <br>
         Symphonic bliss awaits you as your Colorado Symphony and guest
         conductor Aram Demirjian present a powerhouse program highlighted by
         Vivaldi's programmatic masterpiece, The Four Seasons. As striking and
@@ -72,25 +76,33 @@
         Fourth Symphony — is a meticulously structured meditation on fate that
         endures as one of his most popular and identifiable compositions. Over
         four movements, Tchaikovsky transforms his personal battle with fate
-        into one of humanity's most powerful works of art. Among today's best
+        into one of humanity's most powerful works of b art. Among today's best
         and brightest composers, Jessie Montgomery's Strum draws on the spirit
         of dance, movement, and American folk expressions in an ecstatic
         celebration that will have you on the edge of your seat.
+        <br>
+        <br>
       </p>
+
+      <label for="moreCheckbox1" class="less1" style="font-size: small;"> show less </label>
       <h5>Featured Artists</h5>
-      <h6>Aram Demirjian, conductor <br />Paul Huang, violin</h6>
+      <h6>Aram Demirjian, conductor <br>Paul Huang, violin</h6>
       <h5>Repertoire</h5>
       <h6>
-        JESSIE MONTGOMERY Strum<br />
-        VIVALDI The Four Seasons, Op. 8, No. 1-4<br />
+        JESSIE MONTGOMERY Strum<br>
+        VIVALDI The Four Seasons, Op. 8, No. 1-4<br>
         TCHAIKOVSKY Symphony No. 4 in F minor, Op. 36
       </h6>
     </div>
     <div class="card" id="event-card-2">
       <h2>Beethoven Symphony No. 3 with Peter Oundjian</h2>
       <h3>NOV 4-6 FRI-SAT 7:30 SUN 1:00</h3>
-      <button>SHOW MORE</button>   
-      <!-- <p class="popUp">
+      <label for="moreCheckbox2" class="more2">Event Summary</label>
+
+      <input type="checkbox" id="moreCheckbox2">
+      <p class="hidden2" id="popupText2">
+        <br>
+
         History is replete with turning points and with the completion of his
         revolutionary Third Symphony, Beethoven forever changed the idea of
         what a symphony could be. A clear bridging of the Classical and
@@ -108,25 +120,32 @@
         Williams' inspired music perfectly encapsulating Whitman's noble,
         humanistic aspirations. These works will spring to life in the hands
         of Maestro Peter Oundjian and your Colorado Symphony.
-      </p> -->
+        <br>
+        <br>
+      </p>
+
+      <label for="moreCheckbox2" class="less2" style="font-size: small;"> show less </label>
       <h5>Featured Artists</h5>
       <h6>
-        Peter Oundjian, conductor<br />
-        Sterling Elliott, cello<br />
+        Peter Oundjian, conductor<br>
+        Sterling Elliott, cello<br>
         Colorado Symphony Chorus, Duain Wolfe, director
       </h6>
       <h5>Repertoire</h5>
       <h6>
-        VAUGHAN WILLIAMS Toward the Unknown Region<br />
-        ELGAR Cello Concerto in E minor, Op. 85<br />
+        VAUGHAN WILLIAMS Toward the Unknown Region<br>
+        ELGAR Cello Concerto in E minor, Op. 85<br>
         BEETHOVEN Symphony No. 3 in E-flat major, Op. 55 “Eroica”
       </h6>
     </div>
     <div class="card" id="event-card-3">
       <h2>Tchaikovsky Piano Concerto No. 1 with Olga Kern</h2>
       <h3>DEC 2-4 FRI-SAT 7:30 SUN 1:00</h3>
-      <button>SHOW MORE</button>
-      <!-- <p id="popUp">
+      <label for="moreCheckbox3" class="more3">Event Summary</label>
+
+      <input type="checkbox" id="moreCheckbox3">
+      <p class="hidden3" id="popupText3">
+        <br>
         Peter Ilyich Tchaikovsky — so highly regarded for his symphonic
         compositions — placed himself among the greats of the keyboard with
         the completion of his First Piano Concerto. The work is filled with
@@ -143,23 +162,29 @@
         memorable themes and complex orchestrations that mirror his own
         battles against Soviet oppression. Ending on a triumphant note, this
         is a finale that will leave you breathless.
-      </p> -->
+        <br>
+        <br>
+      </p>
+      <label for="moreCheckbox3" class="less3" style="font-size: small;"> show less </label>
       <h5>Featured Artists</h5>
       <h6>
-        Christian Reif, conductor<br />
+        Christian Reif, conductor<br>
         Olga Kern, piano
       </h6>
       <h5>Repertoire</h5>
       <h6>
-        TCHAIKOVSKY Piano Concerto No. 1 in B-flat major, Op. 23<br />
+        TCHAIKOVSKY Piano Concerto No. 1 in B-flat major, Op. 23<br>
         SHOSTAKOVICH Symphony No. 10 in E minor, Op. 93
       </h6>
     </div>
     <div class="card" id="event-card-4">
       <h2>Ravel's Daphnis et Chloé</h2>
       <h3>JAN13-15 FRI-SAT 7:30 SUN 1:00</h3>
-      <button>SHOW MORE</button>
-      <!-- <p id="popUp">
+      <label for="moreCheckbox4" class="more4">Event Summary</label>
+
+      <input type="checkbox" id="moreCheckbox4">
+      <p class="hidden4" id="popupText4">
+        <br>
         Be still my heart! A whirling celebration of pagan love awaits
         listeners with Ravel's Daphnis et Chloé, which he called a “symphonie
         chorégraphique” rather than a ballet, reflecting a sense of powerful,
@@ -179,17 +204,20 @@
         tragically passing at the age of just 24. This sweet and playful ode
         to spring is just the transportive overture to carry away your winter
         doldrums.
-      </p> -->
+        <br>
+        <br>
+      </p>
+      <label for="moreCheckbox4" class="less4" style="font-size: small;"> show less </label>
       <h5>Featured Artists</h5>
       <h6>
-        Kevin John Edusei, conductor<br />
-        Yumi Hwang-Williams, violin<br />
+        Kevin John Edusei, conductor<br>
+        Yumi Hwang-Williams, violin<br>
         Colorado Symphony Chorus, Duain Wolfe, director
       </h6>
       <h5>Repertoire</h5>
       <h6>
-        BOULANGER D'un matin de printemps<br />
-        SZYMANOWSKI Violin Concerto No. 1, Op. 35<br />
+        BOULANGER D'un matin de printemps<br>
+        SZYMANOWSKI Violin Concerto No. 1, Op. 35<br>
         RAVEL Daphnis et Chloé
       </h6>
     </div>
@@ -197,8 +225,11 @@
     <div class="card" id="event-card-5">
       <h2>Beethoven Symphony No. 8</h2>
       <h3>FEB 10-12 FRI-SAT 7:30 SUN 1:00</h3>
-      <button>SHOW MORE</button>
-      <!-- <p id="popUp">
+      <label for="moreCheckbox5" class="more5">Event Summary</label>
+
+      <input type="checkbox" id="moreCheckbox5">
+      <p class="hidden5" id="popupText5">
+        <br>
         Beethoven's Eighth — which he referred to as “my little Symphony in
         F,”— is the most cheery, joyful, and experimental of his symphonies.
         Its relatively compact scale allowed Beethoven to be more imaginative
@@ -216,21 +247,24 @@
         and walk off the stage in turn, leaving just two violins to convey the
         final notes. In this uniquely imaginative performance, seeing is
         believing.
-      </p> -->
+        <br>
+        <br>
+      </p>
+      <label for="moreCheckbox5" class="less5" style="font-size: small;"> show less </label>
       <h5>Featured Artists</h5>
       <h6>
-        Christopher Dragon, conductor<br />
-        Colorado Symphony Horn Section:<br />
-        Michael Thornton<br />
-        Kolio Plachkov<br />
-        Carolyn Kunicki<br />
+        Christopher Dragon, conductor<br>
+        Colorado Symphony Horn Section:<br>
+        Michael Thornton<br>
+        Kolio Plachkov<br>
+        Carolyn Kunicki<br>
         Matt Eckenhoff
       </h6>
       <h5>Repertoire</h5>
       <h6>
-        HAYDN Symphony No. 45 in F-sharp minor, “Farewell" <br />
+        HAYDN Symphony No. 45 in F-sharp minor, “Farewell" <br>
         R. SCHUMANN Konzertstück for 4 Horns and Orchestra in F major, Op.
-        86<br />
+        86<br>
         BEETHOVEN Symphony No. 8 in F major, Op. 93
       </h6>
     </div>
@@ -238,8 +272,11 @@
     <div class="card" id="event-card-6">
       <h2>Beethoven's Emperor Concerto</h2>
       <h3>February 24-26 FRI-SAT 730 SUN 1</h3>
-      <button>SHOW MORE</button>
-      <!-- <p id="popUp">
+      <label for="moreCheckbox6" class="more6">Event Summary</label>
+
+      <input type="checkbox" id="moreCheckbox6">
+      <p class="hidden6" id="popupText6">
+        <br>
         One of the most accomplished of all piano works, Beethoven's “Emperor”
         Concerto features a striking opening movement and a glorious finale,
         with beauty and virtuosic style throughout that makes it one of the
@@ -255,16 +292,19 @@
         generosity, and the purity of his soul." This heroic and joyous work
         offers a brilliant conclusion to a performance of energizing
         masterworks.
-      </p> -->
+        <br>
+        <br>
+      </p>
+      <label for="moreCheckbox6" class="less6" style="font-size: small;"> show less </label>
       <h5>Featured Artists</h5>
       <h6>
-        Teddy Abrams, conductor<br />
+        Teddy Abrams, conductor<br>
         Stewart Goodyear, piano
       </h6>
       <h5>Repertoire</h5>
       <h6>
-        PERKINSON Worship: A Concert Overture <br />
-        BEETHOVEN Piano Concerto No. 5 in E-flat major, Op. 73, “Emperor"<br />
+        PERKINSON Worship: A Concert Overture <br>
+        BEETHOVEN Piano Concerto No. 5 in E-flat major, Op. 73, “Emperor"<br>
         PROKOFIEV Symphony No. 5 in B-flat major, Op. 100
       </h6>
     </div>
@@ -272,8 +312,11 @@
     <div class="card" id="event-card-7">
       <h2>Bartók Concerto for Orchestra</h2>
       <h3>March 10th-12th FRI-SAT 7:30 SUN 1:00</h3>
-      <button>SHOW MORE</button>
-      <!-- <p id="popUp">
+      <label for="moreCheckbox7" class="more7">Event Summary</label>
+
+      <input type="checkbox" id="moreCheckbox7">
+      <p class="hidden7" id="popupText7">
+        <br>
         One of the foremost conductors of his generation, Alexander Shelley
         joins your Colorado Symphony for a program that will leave you simply
         spellbound. Spanish composer Joaquín Rodrigo's classical guitar
@@ -288,16 +331,19 @@
         each section of instruments is treated in a soloistic and virtuosic
         way, combining elements of Western art music and Hungarian folk songs
         in a stirring finale to an evening of symphonic sublimity.
-      </p> -->
+        <br>
+        <br>
+      </p>
+      <label for="moreCheckbox7" class="less7" style="font-size: small;"> show less </label>
       <h5>Featured Artists</h5>
       <h6>
-        Alexander Shelley, conductor<br />
+        Alexander Shelley, conductor<br>
         Pablo Sainz Villegas, guitar
       </h6>
       <h5>Repertoire</h5>
       <h6>
-        ANNA CLYNE This Midnight Hour<br />
-        RODRIGO Concierto de Aranjuez<br />
+        ANNA CLYNE This Midnight Hour<br>
+        RODRIGO Concierto de Aranjuez<br>
         BARTÓK Concerto for Orchestra
       </h6>
     </div>
@@ -305,25 +351,31 @@
     <div class="card" id="event-card-8">
       <h2>Brahms Requiem with Peter Oundjian</h2>
       <h3>Mar 24-26 FRI-SAT 7:30 SUN 1:00</h3>
-      <button>SHOW MORE</button>
-      <!-- <p id="popUp">
-            Unlike other Requiem Masses, Brahms' A German Requiem is not primarily a Mass for the dead. Instead, it is
-            intended as comfort and solace for those left behind as they mourn the death of others. Confronting life as
-            much as it does death, Brahms further differentiates his Requiem by setting excerpts from the Lutheran Bible
-            and apocrypha in German instead of the Catholic, Latin text used in the Requiem Masses by Mozart, Verdi, and
-            Berlioz. The Colorado Symphony Chorus and two vocal soloists lend distinction to this stunning masterpiece,
-            which remains one of the most revered choral works ever composed. A taste for the exotic surfaces often in
-            the
-            catalogue of Maurice Ravel and his orchestral song cycle Shéhérazade is no exception. Named for the
-            protagonist of One Thousand and One Nights, Shéhérazade is a woman who employs her imagination as a means of
-            escape. "Je voudrais voir...", she repeats, meaning "I would like to see...", this refrain sets the tone for
-            Ravel's song cycle which drips with color evoking images of the far east. Drawing on music from the opera,
-            Weber's Overture to Oberon is a celebration of the supernatural realm. Like in Mozart's The Magic Flute,
-            Weber
-            establishes Oberon's horn as a mystical instrument and its call as a leitmotif throughout the overture,
-            unleashing an exuberant conversation between instrumental voices and concluding with a virtuosic flourish
-            conducted by Maestro Peter Oundjian.
-          </p> -->
+      <label for="moreCheckbox8" class="more8">Event Summary</label>
+
+      <input type="checkbox" id="moreCheckbox8">
+      <p class="hidden8" id="popupText8">
+        <br>
+        Unlike other Requiem Masses, Brahms' A German Requiem is not primarily a Mass for the dead. Instead, it is
+        intended as comfort and solace for those left behind as they mourn the death of others. Confronting life as
+        much as it does death, Brahms further differentiates his Requiem by setting excerpts from the Lutheran Bible
+        and apocrypha in German instead of the Catholic, Latin text used in the Requiem Masses by Mozart, Verdi, and
+        Berlioz. The Colorado Symphony Chorus and two vocal soloists lend distinction to this stunning masterpiece,
+        which remains one of the most revered choral works ever composed. A taste for the exotic surfaces often in
+        the
+        catalogue of Maurice Ravel and his orchestral song cycle Shéhérazade is no exception. Named for the
+        protagonist of One Thousand and One Nights, Shéhérazade is a woman who employs her imagination as a means of
+        escape. "Je voudrais voir...", she repeats, meaning "I would like to see...", this refrain sets the tone for
+        Ravel's song cycle which drips with color evoking images of the far east. Drawing on music from the opera,
+        Weber's Overture to Oberon is a celebration of the supernatural realm. Like in Mozart's The Magic Flute,
+        Weber
+        establishes Oberon's horn as a mystical instrument and its call as a leitmotif throughout the overture,
+        unleashing an exuberant conversation between instrumental voices and concluding with a virtuosic flourish
+        conducted by Maestro Peter Oundjian.
+        <br>
+        <br>
+      </p>
+      <label for="moreCheckbox8" class="less8" style="font-size: small;"> show less </label>
       <h5>Featured Artists</h5>
       <h6>
         Peter Oundjian, conductor<br>
@@ -344,8 +396,25 @@
     <div class="card" id="event-card-9">
       <h2>Beethoven Violin Concerto</h2>
       <h3>Apr 21-23 Fri & Sat 7:30 Sunday 1:00</h3>
-      <button>SHOW MORE</button>
-      t -->
+      <label for="moreCheckbox9" class="more9">Event Summary</label>
+
+      <input type="checkbox" id="moreCheckbox9">
+      <p class="hidden9" id="popupText9">
+        <br>
+        Join your Colorado Symphony and Principal Conductor Peter Oundjian in welcoming
+        acclaimed soloist and 2021
+        Gramophone Artist of the Year, James Ehnes, to Boettcher Concert Hall for a reinvigoration of Beethoven's
+        majestic Violin Concerto. Beethoven's output in nearly every musical genre was prolific, yet surprisingly he
+        wrote only one concerto for the violin. The four opening drum taps that begin this masterpiece remain one of the
+        most surprising and audacious ideas that the composer ever committed to paper, setting the stage for a
+        transcendent work that stands among the greats of the repertoire. Bruckner's Seventh Symphony emphatically
+        elevated him into the ranks of legendary 19th century composers in a work that is epic in scope and scale, with
+        knowing nods to Beethoven's Third Symphony and Wagner's Ring Cycle, including his use of the famous Wagner
+        tubas. This revered work caps an awe-inspiring program of inspiring masterworks led by Maestro Oundjian.
+      </p>
+      <br>
+      <br>
+      <label for="moreCheckbox9" class="less9" style="font-size: small;"> show less </label>
       <h5>Featured Artists</h5>
       <h6>
         Peter Oundjian, conductor<br>
@@ -361,7 +430,7 @@
     </div>
   </div>
 
-  <div id="footer"></div>
+  <footer>Colorado Symphony</footer>
 </body>
 
 </html>

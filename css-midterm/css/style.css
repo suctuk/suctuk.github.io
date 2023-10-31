@@ -1,13 +1,16 @@
 body {
   color: #333;
   margin: 0;
-  font: 1.2em / 1.2 Arial, Helvetica, sans-serif;
+  font: 1.2em / 1.2 "Hind Madurai", sans-serif;
+  background-color: #eaf2d7;
 }
 
 nav {
-  background-color: #000;
+  background-color: #2b2d42;
   padding: 0.5em;
   position: sticky;
+  display: flex;
+  justify-content: space-between;
   top: 0;
 }
 
@@ -23,21 +26,18 @@ nav ul {
 nav a {
   color: #fff;
   text-decoration: none;
-  padding: 0.5em 1em;
+  padding: 0.5em 0.5em;
+}
+nav a:hover {
+  text-emphasis: circle;
 }
 
 .logo {
   display: flex;
-  justify-content: center; /* Horizontal centering */
-  align-items: center; /* Vertical centering */
+  justify-content: center; 
+  align-items: center;
   padding-bottom: 1vw;
   padding-top: 1vw;
-}
-
-.logo img{
-  max-width: 100%; /* Ensure the logo doesn't exceed the container width */
-  max-height: 100%; /* Ensure the logo doesn't exceed the container height */
-  /* You can also set a specific width if needed, like max-width: 200px; */
 }
 
 .grid {
@@ -49,26 +49,62 @@ nav a {
   grid-column-gap: 1em;
 }
 
-#intro{
+#intro {
   text-align: center;
 }
 
-
-.banner img{
-    max-width: 110%;
-    max-height: 110%;
-    padding-left: 0vw;
+.banner img {
+  max-width: 110%;
+  max-height: 110%;
+  padding-left: 0vw;
 }
 
 .intro {
   text-align: center;
 }
 
+/* Basic button styles */
+label {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #2b2d42;
+  color: #fff;
+  text-align: center;
+  border: 1px solid black;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
 
-#events{
+label:hover {
+  background-color: #eaf2d7;
+  border-color: #eaf2d7; 
+  color: #2b2d42;
+}
+
+footer {
+  text-align: center;
+  background-color: #2b2d42;
+  color: white;
+  padding: 1vw;
+  margin-top: 1vw;
+}
+
+#events {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-evenly;
+}
 
+@media (max-width: 400px) {
+  img,
+  ul.nav {
+    display: grid;
+    grid-template-columns: 100%;
+  }
+  .grid {
+    display: flex;
+    flex-direction: column;
+  }
 }
