@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+
+    <style>
+        #output {
+            font-size: 80px; /* Adjust the font size as needed */
+            color: rgb(135, 135, 139);    /* Change the color as needed */
+            justify-content: center;
+        }
+    </style>
+    
+</head>
+
+<body>
+    <button type="button">SUPRISE</button>
+    <button type="button" id="luckyNumber">Lucky Number?</button>
+    <div id="output" ></div>
+
+    <script>
+        const surpriseButton = document.querySelector("button");
+        const luckyNumberButton = document.getElementById("luckyNumber");
+
+        surpriseButton.addEventListener("click", colors);
+        luckyNumberButton.addEventListener("click", luckyNumber);
+
+        function colors() {
+            const colors = ["#0A0908", "#22333B", "#EAE0D5", "#C6AC8F", "#C6AC8F", "#3A7A97"];
+            const randomColor = colors[Math.floor(Math.random() * colors.length)];
+            document.body.style.backgroundColor = randomColor;
+        }
+
+        function luckyNumber() {
+            const randomNumber = Math.floor(Math.random() * 100) + 1;
+            console.log(`Random Number: ${randomNumber}`);
+            const outputElement = document.getElementById("output");
+            outputElement.innerHTML = `${randomNumber}`;
+        }
+    </script>
+</body>
+
+</html>
