@@ -1,24 +1,37 @@
 h1 {
-  font-family: helvetica, arial, sans-serif;
+  color: #333;
+  margin: 0;
+  font: 4em / 1.2 "Hind Madurai", sans-serif;
+  background-color: #6F8695;
   text-align: center;
 }
 
 body {
   width: 640px;
   margin: 0 auto;
+  background-color: #6F8695;
 }
 
 .full-img {
   position: relative;
   display: block;
-  width: 640px;
   height: 480px;
+  border-radius: 10px;
+}
+
+.display-img{
+  height: 480px;
+}
+
+img{
+  border-radius: 50px;
 }
 
 .overlay {
   position: absolute;
   top: 0;
   left: 0;
+  border-radius: 50px;
   width: 640px;
   height: 480px;
   background-color: rgba(0,0,0,0);
@@ -26,18 +39,26 @@ body {
 
 button {
   border: 0;
+  height:50px;
+  width: 80px;
   background: rgba(150,150,150,0.6);
-  text-shadow: 1px 1px 1px white;
+  text-shadow: 1px 1px 1px #2b2d42;
   border: 1px solid #999;
   position: absolute;
   cursor: pointer;
-  top: 2px;
-  left: 2px;
+  top: 20px;
+  left: 20px;
+  border-radius: 4px;
+}
+button:hover {
+  background-color: #999;
+  border-color: #999; 
+  color: #2b2d42;
 }
 
 .thumb-bar img {
-  display: block;
+  display: flex;
   width: 20%;
-  float: left;
+  float: right;
   cursor: pointer;
 }
