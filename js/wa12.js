@@ -3,17 +3,22 @@ const answerBtn = document.querySelector('#js-tweet').addEventListener('click', 
 
 const questionTxt = document.querySelector('#js-quote-text');
 let answerTxt = document.querySelector('#js-answer-text');
+let linkBtn = document.querySelector('#js-link-button');
 
-let answer = '';
+let type;
 
 // this is the endpoint for the API that we want to get a reponse from
 const endpoint = 'https://www.boredapi.com/api/activity';
 
 async function getQuote() {
 
+    const selectedType = document.getElementById('activityType').value;
+
    // try -> tries something; if it returns an error, it puts us into the catch block
     try {
-        const response = await fetch(endpoint);
+        const timestamp = new Date().getTime();
+        //const randomParam = Math.random(); // Add a random parameter to try and fix cache issues
+        const response = await fetch(`${endpoint}?type=${selectedType}&timestamp=${timestamp}`);
         // if !response.ok is "if the response ISN'T okay (status code 200)"
         if (!response.ok) {
             throw Error(response.statusText);
@@ -25,11 +30,41 @@ async function getQuote() {
         // JSON is a dictionary, which is like a list; we call specific pieces of information out based on the 'key' associated with that value
         displayQuote(json['activity']);
         type = json['type'];
+
+        if (json['link']) {
+            displayLinkButton(json['link']);
+        } else {
+            // Hide the link button if there is no link
+            hideLinkButton();
+        }
+
         answerTxt.textContent = '';
     }
     catch(err) {
         console.log(err);
         alert('Failed to fetch new quote');
+    }
+}
+
+function displayLinkButton(link) {
+    // If the link button doesn't exist, create and append it
+    if (!linkBtn) {
+        linkBtn = document.createElement('a');
+        linkBtn.id = 'js-link-button';
+        linkBtn.textContent = 'Go to Link';
+        linkBtn.target = '_blank';
+        controlsSection.appendChild(linkBtn); // Append to the controls section
+    }
+
+    // Set the link and make the button visible
+    linkBtn.href = link;
+    linkBtn.style.display = 'block';
+}
+
+function hideLinkButton() {
+    // Hide the link button if it exists
+    if (linkBtn) {
+        linkBtn.style.display = 'none';
     }
 }
 
