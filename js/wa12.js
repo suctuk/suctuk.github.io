@@ -1,11 +1,13 @@
 const newBtn = document.querySelector('#js-new-quote').addEventListener('click', getQuote);
-const answerBtn = document.querySelector('#js-tweet').addEventListener('click', displayAnswer);
+const answerBtn = document.querySelector('#js-resources').addEventListener('click', displayResource);
 
 const questionTxt = document.querySelector('#js-quote-text');
-let answerTxt = document.querySelector('#js-answer-text');
-let linkBtn = document.querySelector('#js-link-button');
+let answerTxt = document.querySelector('#js-resource-text');
 
 let type;
+let participants;
+let price;
+let link;
 
 // this is the endpoint for the API that we want to get a reponse from
 const endpoint = 'https://www.boredapi.com/api/activity';
@@ -30,13 +32,9 @@ async function getQuote() {
         // JSON is a dictionary, which is like a list; we call specific pieces of information out based on the 'key' associated with that value
         displayQuote(json['activity']);
         type = json['type'];
-
-        if (json['link']) {
-            displayLinkButton(json['link']);
-        } else {
-            // Hide the link button if there is no link
-            hideLinkButton();
-        }
+        participants = json['participants'];
+        price = json['price'];
+        link = json['link'];
 
         answerTxt.textContent = '';
     }
@@ -46,27 +44,6 @@ async function getQuote() {
     }
 }
 
-function displayLinkButton(link) {
-    // If the link button doesn't exist, create and append it
-    if (!linkBtn) {
-        linkBtn = document.createElement('a');
-        linkBtn.id = 'js-link-button';
-        linkBtn.textContent = 'Go to Link';
-        linkBtn.target = '_blank';
-        controlsSection.appendChild(linkBtn); // Append to the controls section
-    }
-
-    // Set the link and make the button visible
-    linkBtn.href = link;
-    linkBtn.style.display = 'block';
-}
-
-function hideLinkButton() {
-    // Hide the link button if it exists
-    if (linkBtn) {
-        linkBtn.style.display = 'none';
-    }
-}
 
 // this function shows the question
 function displayQuote(question) {
@@ -74,8 +51,18 @@ function displayQuote(question) {
 }
 
 // this function shows the answer
-function displayAnswer() {
-    answerTxt.textContent = type;
+function displayResource() {
+    answerTxt.textContent = 'friends: ' + participants + ' price: ' + price + ' ';
+    if (link !== '') {
+
+        const linkButton = document.createElement('button');
+        linkButton.textContent = 'Go to Link';
+
+        linkButton.addEventListener('click', function() {
+            window.open(link, '_blank');
+        });
+        answerTxt.appendChild(linkButton);
+    } 
 }
 
 // we run getQuote once when the script first loads to populate a question
