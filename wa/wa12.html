@@ -1,47 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/wa12.css">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/wa12.css">
+  <title>Document</title>
 </head>
+
 <body>
-    <div class="app">
-        <header>Random Activity Generator</header>
-    
-        <label for="activityType">Select Activity Type:</label>
-        <select id="activityType">
-            <option value="education">Education</option>
-            <option value="recreational">Recreational</option>
-            <option value="social">Social</option>
-            <option value="diy">DIY</option>
-            <option value="charity">Charity</option>
-            <option value="cooking">Cooking</option>
-            <option value="relaxation">Relaxation</option>
-            <option value="music">Music</option>
-            <option value="busywork">Busywork</option>
-            <!-- Add more options based on available types -->
-        </select>
+  <div class="app">
+    <header>Random Activity Generator</header>
+    <div id="TypeDropdown" class = "dropdown-container">
+      <label for="activityType">Select Activity Type:</label>
+      <select id="activityType">
+        <option value="education">Education</option>
+        <option value="recreational">Recreational</option>
+        <option value="social">Social</option>
+        <option value="diy">DIY</option>
+        <option value="charity">Charity</option>
+        <option value="cooking">Cooking</option>
+        <option value="relaxation">Relaxation</option>
+        <option value="music">Music</option>
+        <option value="busywork">Busywork</option>
+        <!-- Add more options based on available types -->
+      </select>
+    </div>
 
 
-        <section class="quotes">
-          <div class="quote-text" id="js-quote-text"></div>
-          <div class="quote-text" id="js-resource-text"></div>
-        </section>
-        <section class="controls" >
+    <section class="quotes">
+      <div class="quote-text" id="js-quote-text"></div>
+      <div class="quote-text" id="js-resource-text"></div>
+    </section>
+    <section class="controls">
 
-          <a id="js-link-button" style="display: none;"></a> <!-- Add this line -->
+      <a id="js-link-button" style="display: none;"></a> <!-- Add this line -->
 
-          <button type="button" id="js-new-quote" class="new-quote button">
-            Bored button
-          </button>
-          <button type="button" id="js-resources" class="twitter button">
-            What do I need?
-          </button>
-        </section>
-      </div>
-      <script src="../js/wa12.js"></script>
+      <button type="button" id="js-new-quote" class="new-quote button">
+        Bored button
+      </button>
+      <button type="button" id="js-resources" class="twitter button">
+        What do I need?
+      </button>
+    </section>
+  </div>
+  <script src="../js/wa12.js"></script>
 </body>
+
 </html>
