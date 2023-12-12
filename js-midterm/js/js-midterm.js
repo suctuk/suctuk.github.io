@@ -1,4 +1,3 @@
-//from w3 schools/
 document.querySelector("#clock").addEventListener("click", timeToPhone);
 document.querySelector("#reset").addEventListener("click", resetBtn);
 // document.querySelector("#backspace").addEventListener("click", backspace);
@@ -7,7 +6,7 @@ document.querySelector("#reset").addEventListener("click", resetBtn);
 let href = "0";
 
 let phoneNumber = "";
-
+// Adapted from base code: https://www.w3schools.com/js/tryit.asp?filename=tryjs_timing_clock
 function startTime() {
   const today = new Date();
   let h = today.getHours();
@@ -21,7 +20,7 @@ function startTime() {
   let alarmMinutes = 60 - m;
   let alarmSeconds = 60 - s;
 
-  document.getElementById("alarm").innerHTML = alarmMinutes + ":" + alarmSeconds;
+  document.getElementById("alarm").innerHTML = alarmMinutes + " min " + alarmSeconds + " sec";
   document.getElementById("clock").innerHTML = h + ":" + m + ":" + s;
   setTimeout(startTime, 1000);
 }
@@ -32,7 +31,7 @@ function checkTime(i) {
   } // add zero in front of numbers < 10
   return i;
 }
-
+// end of adapted code.
 
 function resetBtn() {
   alert("Your Phone Number has been reset");

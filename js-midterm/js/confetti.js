@@ -1,6 +1,6 @@
-//used chatGPT to make
 document.querySelector("#submit").addEventListener("click", celebrate);
 
+//pulled from Balls In class assignment
 function randomRGB() {
   return `rgb(${random(0, 255)},${random(0, 255)},${random(0, 255)})`;
 }
@@ -9,6 +9,7 @@ function random(min, max) {
   return num;
 }
 
+//adapted from code from chatGPT
 function celebrate() {
   const confettiContainer = document.createElement("div");
   confettiContainer.classList.add("confetti-container");

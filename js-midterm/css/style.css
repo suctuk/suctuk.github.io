@@ -30,11 +30,12 @@ h1::before {
 }
 
 h1 {
-  font-size: 5vw;
+  font-size: 4vw;
 }
 
 h3 {
     font-size: 3vw;
+    letter-spacing: .2rem;
 }
 
 html {
