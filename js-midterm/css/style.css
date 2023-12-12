@@ -42,3 +42,6 @@ html {
   inline-size: 100%;
 }
 
+#alarm {
+    font-size: 2vw;
+}

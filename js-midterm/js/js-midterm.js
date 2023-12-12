@@ -17,7 +17,13 @@ function startTime() {
 
   m = checkTime(m);
   s = checkTime(s);
+  console.log(m);
+  console.log(s);
 
+  let alarmMinutes = 60 - m;
+  let alarmSeconds = 60 - s;
+
+  document.getElementById("alarm").innerHTML = alarmMinutes + ":" + alarmSeconds;
   document.getElementById("clock").innerHTML = h + ":" + m + ":" + s;
   setTimeout(startTime, 1000);
 }
@@ -28,6 +34,7 @@ function checkTime(i) {
   } // add zero in front of numbers < 10
   return i;
 }
+
 
 function resetBtn() {
   alert("Your Phone Number has been reset");
@@ -40,6 +47,10 @@ function resetBtn() {
 //   var currentNumber = document.getElementById("phone");
 //   currentNumber.textContent = phoneNumber;
 // }
+
+//add a button to max the number to 10
+ 
+//add a timer for the next hour
 
 function timeToPhone() {
       console.log(phoneNumber);
