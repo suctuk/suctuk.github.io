@@ -1,7 +1,7 @@
 //from w3 schools/
 document.querySelector("#clock").addEventListener("click", timeToPhone);
 document.querySelector("#reset").addEventListener("click", resetBtn);
-// document.querySelector("#backspace").addEventListener("click", backspace);
+document.querySelector("#backspace").addEventListener("click", backspace);
 
 // reference the phone number locally, not over in json because it is hard to write to the file. Would basically be a database. 
 let href = "0";
@@ -17,8 +17,6 @@ function startTime() {
 
   m = checkTime(m);
   s = checkTime(s);
-  console.log(m);
-  console.log(s);
 
   let alarmMinutes = 60 - m;
   let alarmSeconds = 60 - s;
@@ -45,8 +43,24 @@ function resetBtn() {
 }
 // function backspace(){
 //   var currentNumber = document.getElementById("phone");
-//   currentNumber.textContent = phoneNumber;
+//   currentNumber.textContent.length -= 1;
 // }
+
+// function backspace() {
+//   var currentNumber = document.getElementById("phone");
+
+//   // Check if the phone number is not empty
+//   if (phoneNumber.length > 0) {
+//     // Shorten the length by 1 digit
+//     var shortenedNumber = currentNumber.replace(/.$/,"");
+
+//   }
+//   currentNumber.textContent = shortenedNumber;
+//   console.log(currentNumber);
+//   console.log(shortenedNumber);
+// }
+
+
 
 //add a button to max the number to 10
  
@@ -56,11 +70,16 @@ function timeToPhone() {
       console.log(phoneNumber);
       phoneNumber += href;
       console.log(phoneNumber);
-
+  
       var currentNumber = document.getElementById("phone");
 
       currentNumber.textContent = phoneNumber;
 
-
+      if(phoneNumber.length === 10){
+        alert("You have 10 digits! Hit submit if you are done!");
+      }
+      else if(phoneNumber.length > 10){
+        alert("ToO LoNG");
+      }
 
 }
