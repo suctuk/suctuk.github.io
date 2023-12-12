@@ -1,4 +1,41 @@
-#clock{
-    font-size: 10vw;
-    text-align: center;
+body {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  text-align: center;
+  background-color: #000;
+  color: white;
 }
+/* Found on https://blog.hubspot.com/website/css-animation-examples */
+h1::before {
+  transform: scaleX(0);
+  transform-origin: bottom right;
+}
+
+h1:hover::before {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+h1::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  inset: 0 0 0 0;
+  background: hsl(200, 66%, 51%);
+  z-index: -1;
+  transition: transform 0.3s ease;
+}
+
+h1 {
+  font-size: 5vw;
+  text-align: center;
+}
+
+html {
+  block-size: 100%;
+  inline-size: 100%;
+}
+

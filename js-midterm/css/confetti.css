@@ -1,0 +1,22 @@
+body {
+    margin: 0;
+    overflow: hidden;
+  }
+
+  .confetti {
+    width: 10px;
+    height: 10px;
+    color: #f00; /* You can set the color of your confetti here */
+    position: absolute;
+    animation: fall 1s ease-in-out infinite;
+    transform-origin: 50% 50%;
+  }
+
+  @keyframes fall {
+    0% {
+      transform: translateY(0) rotate(0deg);
+    }
+    100% {
+      transform: translateY(600px) rotate(360deg);
+    }
+  }

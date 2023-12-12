@@ -1,0 +1,22 @@
+.fancy-button {
+
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(45deg, #ff0000, #ff8000, #ffff00, #80ff00, #00ff80, #00ffff, #0080ff, #0000ff, #8000ff, #ff00ff);
+    background-size: 200% 200%;
+    color: #6c6c6c;
+    border-radius: 8px;
+    transition: background 0.5s;
+  }
+
+  .fancy-button:hover {
+    background-position: right center;
+  }
