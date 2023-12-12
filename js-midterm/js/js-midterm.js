@@ -1,7 +1,7 @@
 //from w3 schools/
 document.querySelector("#clock").addEventListener("click", timeToPhone);
 document.querySelector("#reset").addEventListener("click", resetBtn);
-document.querySelector("#backspace").addEventListener("click", backspace);
+// document.querySelector("#backspace").addEventListener("click", backspace);
 
 // reference the phone number locally, not over in json because it is hard to write to the file. Would basically be a database. 
 let href = "0";
