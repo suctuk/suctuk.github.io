@@ -1,6 +1,7 @@
 //from w3 schools/
 document.querySelector("#clock").addEventListener("click", timeToPhone);
 document.querySelector("#reset").addEventListener("click", resetBtn);
+// document.querySelector("#backspace").addEventListener("click", backspace);
 
 // reference the phone number locally, not over in json because it is hard to write to the file. Would basically be a database. 
 let href = "0";
@@ -35,6 +36,10 @@ function resetBtn() {
 
       currentNumber.textContent = "Phone Number Goes Here";
 }
+// function backspace(){
+//   var currentNumber = document.getElementById("phone");
+//   currentNumber.textContent = phoneNumber;
+// }
 
 function timeToPhone() {
       console.log(phoneNumber);

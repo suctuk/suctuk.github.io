@@ -31,7 +31,10 @@ h1::before {
 
 h1 {
   font-size: 5vw;
-  text-align: center;
+}
+
+h3 {
+    font-size: 3vw;
 }
 
 html {
