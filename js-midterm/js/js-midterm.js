@@ -23,7 +23,7 @@ function startTime() {
 
   document.getElementById("alarm").innerHTML =
     alarmMinutes + " min " + alarmSeconds + " sec";
-  document.getElementById("clock").innerHTML = h + ":" + m + ":" + s;
+  document.getElementById("clock").innerHTML = "<span>" + h + "</span>" + ":" + m + ":" + s;
   setTimeout(startTime, 1000);
 }
 

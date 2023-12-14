@@ -9,7 +9,10 @@
     align-items: center;
     height: 10vh;
   }
-
+  span{
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+  }
 /* found on https://webdeasy.de/en/top-css-buttons-en/ */
 .glow-on-hover {
     border: none;
