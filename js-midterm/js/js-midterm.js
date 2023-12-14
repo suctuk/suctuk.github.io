@@ -1,8 +1,7 @@
 document.querySelector("#clock").addEventListener("click", timeToPhone);
 document.querySelector("#reset").addEventListener("click", resetBtn);
 document.querySelector("#submit").addEventListener("click", celebrate);
-
-// document.querySelector("#backspace").addEventListener("click", backspace);
+document.querySelector("#backspace").addEventListener("click", backspace);
 
 // reference the phone number locally, not over in json because it is hard to write to the file. Would basically be a database.
 let href = "0";
@@ -43,28 +42,22 @@ function resetBtn() {
 
   currentNumber.textContent = "Phone Number Goes Here";
 }
-// function backspace(){
-//   var currentNumber = document.getElementById("phone");
-//   currentNumber.textContent.length -= 1;
-// }
 
-// function backspace() {
-//   var currentNumber = document.getElementById("phone");
+function backspace() {
+  if (phoneNumber.length === 0) {
+    alert("There are no digits to remove!");
+    return;
+  }
+  phoneNumber = phoneNumber.substring(0, phoneNumber.length - 1);
 
-//   // Check if the phone number is not empty
-//   if (phoneNumber.length > 0) {
-//     // Shorten the length by 1 digit
-//     var shortenedNumber = currentNumber.replace(/.$/,"");
+  var currentNumber = document.getElementById("phone");
 
-//   }
-//   currentNumber.textContent = shortenedNumber;
-//   console.log(currentNumber);
-//   console.log(shortenedNumber);
-// }
-
-//add a button to max the number to 10
-
-//add a timer for the next hour
+  if (phoneNumber.length === 0) {
+    currentNumber.textContent = "Phone Number Goes Here";
+  } else {
+    currentNumber.textContent = phoneNumber;
+  }
+}
 
 function timeToPhone() {
   console.log(phoneNumber);
@@ -99,7 +92,7 @@ function celebrate() {
   } else if (phoneNumber.length > 10) {
     alert("ToO LoNG");
     return;
-  } else if(phoneNumber.length === 10){
+  } else if (phoneNumber.length === 10) {
     const confettiContainer = document.createElement("div");
     confettiContainer.classList.add("confetti-container");
 
