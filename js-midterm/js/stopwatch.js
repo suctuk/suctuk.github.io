@@ -1,16 +1,45 @@
-document.querySelector("#stopwatch").addEventListener("click", viewStopwatch);
+document.addEventListener("submit", stopStopwatch);
+let stopwatch;
+let s = 0;
+let m = 0;
+let h = 0;
+let running = false;
 
-var startTime; // to keep track of the start time
-var stopwatchInterval; // to keep track of the interval
-var elapsedPausedTime = 0; // to keep track of the elapsed time while stopped
+function stopStopwatch() {
+  clearInterval(stopwatch);
+
+  stopwatch = null;
+ 
+
+  // sec = s;
+  // min = m;
+  // hour = h;
+
+  // document.getElementById("stopwatch").innerHTML = hour + ":" + min + ":" + sec;
+}
 
 function startStopwatch() {
-  if (!stopwatchInterval) {
-    startTime = new Date().getTime() - elapsedPausedTime; // get the starting time by subtracting the elapsed paused time from the current time
-    stopwatchInterval = setInterval(updateStopwatch, 1000); // update every second
+  if (!running) {
+    stopwatch = setInterval(updateStopwatch, 1000);
+    running = true;
   }
 }
 
-function viewStopwatch(){
+function updateStopwatch() {
+  s++;
 
+  if (s === 60) {
+    s = 0;
+    m++;
+  }
+  if (m === 60) {
+    m = 0;
+    h++;
+  }
+
+  console.log(s);
+
+  document.getElementById("stopwatch").innerHTML = h + ":" + m + ":" + s;
 }
+
+document.addEventListener("DOMContentLoaded", startStopwatch);

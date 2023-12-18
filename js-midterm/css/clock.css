@@ -1,5 +1,5 @@
 #clock {
-    font-size: 10vw;
+    font-size: 9vw;
     text-align: center;
   }
   
@@ -7,7 +7,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 10vh;
+    height: 9vh;
   }
   span{
     text-decoration: underline;

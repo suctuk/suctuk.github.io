@@ -18,7 +18,7 @@ function startTime() {
   m = checkTime(m);
   s = checkTime(s);
 
-  let alarmMinutes = 60 - m;
+  let alarmMinutes = 59 - m;
   let alarmSeconds = 60 - s;
 
   document.getElementById("alarm").innerHTML =
@@ -60,9 +60,8 @@ function backspace() {
 }
 
 function timeToPhone() {
-  console.log(phoneNumber);
+
   phoneNumber += href;
-  console.log(phoneNumber);
 
   var currentNumber = document.getElementById("phone");
 
