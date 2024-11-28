@@ -1,3 +1,6 @@
+/*Found on https://getcssscan.com/css-buttons-examples*/
+
+
 * {
   margin: 0;
   padding: 0;
@@ -82,6 +85,7 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
   padding: 2rem 0;
+  text-align: center;
 }
 
 .project-card {
@@ -110,4 +114,16 @@ body {
   padding: 0.5rem 1rem;
   border-radius: 20px;
   font-size: 0.9rem;
+}
+
+.btn {
+  margin: 5vw;
+  justify-content: center;
+}
+
+pre code {
+  background-color: #eee;
+  border: 1px solid #999;
+  display: block;
+  padding: 20px;
 }
