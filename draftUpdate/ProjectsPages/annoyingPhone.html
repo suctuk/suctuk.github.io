@@ -12,29 +12,35 @@
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="../css/button.css" />
     <link rel="stylesheet" href="../css/footer.css" />
+    <script src="../js/scrollDown.js"></script>
+
 </head>
 
 <body>
-    <!-- Navigation Bar -->
-    <nav class="nav">
-        <a href="#home" class="nav-item">Home</a>
-        <a href="#about" class="nav-item">About</a>
-        <a href="#projects" class="nav-item">Projects</a>
-        <a href="#skills" class="nav-item">Skills</a>
-        <a href="#contact" class="nav-item">Contact</a>
-    </nav>
+    <div class="hero">
+        <h1>Annoying Phone Input</h1>
+        <h4>A JavaScript project with CSS funkiness.</h4>
 
-    <h1 class="hero">Annoying Phone Input</h1>
-    <iframe src="https://senas.me/js-midterm/index.html" width="100%" height="600px" style="text-align: center;"></iframe>
-    <div class="container">
-        <div class="card-body">
-            <p class="card-text" This was a JavaScript Project. The goal of the project was to create a really annoying
-                phone number input. I created one where you used the hour of the time to type out the phone number. So
-                you would have to wait days in order to get a full 9 digits. </p>
-            <h4>Process & Details</h4>
-            <p>Following is the JavaScript used to make the clock functional and to keep track of the phone number</p>
-            <div id="JSFinalCode">
-                <pre>
+        <div class="scroll-downs" onclick="scrollToContent()">
+            <div class="mousey">
+                <div class="scroller"></div>
+            </div>
+        </div>
+    </div>
+    <section id="main-content">
+        <iframe src="https://senas.me/js-midterm/index.html" width="100%" height="600px"
+            style="text-align: center;"></iframe>
+        <div class="container">
+            <div class="card-body">
+                <p class="card-text"> This was a JavaScript Project. The goal of the project was to create a really
+                    annoying phone number input. I created one where you used the hour of the time to type out the phone
+                    number. So you would have to wait days in order to get a full 9 digits.
+                </p>
+                <h4>Process & Details</h4>
+                <p>Following is the JavaScript used to make the clock functional and to keep track of the phone number
+                </p>
+                <div id="JSFinalCode">
+                    <pre>
                     <code>
                     document.querySelector("#clock").addEventListener("click", timeToPhone);
                     document.querySelector("#reset").addEventListener("click", resetBtn);
@@ -152,14 +158,30 @@
                     }
                 </code>
                 </pre>
+                </div>
             </div>
         </div>
+    </section>
+    <div class="container">
+        <section id="skills">
+            <h2>Associated Skills</h2>
+            <div class="skills">
+                <span class="skill-tag">HTML5</span>
+                <span class="skill-tag">CSS3</span>
+                <span class="skill-tag">JavaScript</span>
+                <span class="skill-tag">React</span>
+                <span class="skill-tag">Node.js</span>
+                <span class="skill-tag">Git</span>
+                <span class="skill-tag">Responsive Design</span>
+                <span class="skill-tag">UI/UX</span>
+            </div>
+        </section>
+        <div style="text-align: center;">
+            <a href="../index.html" style="text-align: center;">
+                <button class="button-89" style="text-align: center;">Back to Home</button>
+            </a>
+        </div>
     </div>
-
-    <a href="../index.html">
-        <button class="button-89" style="text-align: center;">Back to Featured Projects</button>
-    </a>
-
     <div class="container">
         <footer class="footer">
             <div class="footer-container">
