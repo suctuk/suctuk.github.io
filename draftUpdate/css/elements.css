@@ -1,0 +1,19 @@
+.cursor {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #03fc52;
+  pointer-events: none;
+  animation: trail 1s ease-out infinite;
+  z-index: 12;
+}
+
+@keyframes trail {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0.2);
+  }
+}
