@@ -1,105 +1,148 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
-  <link rel="stylesheet" href="/css/nav-bar.css" />
-  <link rel="stylesheet" href="/css/style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Portfolio</title>
 
-  <title>Sena Uctuk</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
-  <nav class="navbar navbar-expand-lg bg-light" id="navbar">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="/index.html">Home</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-          <a class="nav-link" href="/pages/hobbies.html">Hobbies</a>
-          <a class="nav-link" href="/pages/projects.html">Projects</a>
-          <a class="nav-link" href="/pages/resume.html">Resume</a>
-          <a class="nav-link" href="/pages/featuredProjects.html">Featured Projects</a>
-  
-        </div>
-      </div>
-      <img src="https://www.rawshorts.com/freeicons/wp-content/uploads/2017/01/black_webpict35_1484337166-1.png"
-        alt="heart icon from rawshorts.com" width="50" id="hearticon" />
-    </div>
-  </nav>
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/button.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+  <link rel="stylesheet" href="css/elements.css" />
+
+  <script src="js/scrollDown.js"></script>
+
+
 </head>
 
 <body>
-  <div class="text-center" id="imageSelf">
-    <img src="https://www.colorado.edu/plc/sites/default/files/styles/small/public/block/senauctuk_0.jpg?itok=ANrL4HLx"
-      class="rounded" alt="image of Sena Uctuk" id="self-image" />
-  </div>
-  <div>
-    <h2 id="self-desc">About Sena</h2>
-    <p id="self-desc">
-      <b>Sounds like: Seh-nah (rhymes with Henna).</b>
-      <br />
-      <em>Presidents Leadership Class • Business Minor Student • Studying
-        Computer Science • University of Colorado Boulder</em>
+  <!-- Navigation Bar -->
+  <nav class="nav">
+    <a href="#home" class="nav-item">Home</a>
+    <a href="#about" class="nav-item">About</a>
+    <a href="#projects" class="nav-item">Projects</a>
+    <a href="#skills" class="nav-item">Skills</a>
+    <a href="#contact" class="nav-item">Contact</a>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="container">
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <h1>Hi! I am Sena!</h1>
+      <img src="img/download.png" alt="Your Profile" class="profile-img">
+      <div class="about" id="about">
+        <h2>Welcome to my portfolio!</h2>
+        <p>I'm a passionate developer focused on creating elegant solutions to complex
+          problems. With expertise in development and fabrication, and a keen eye for design, I bring ideas to life.</p>
+      </div>
       <br>
-      <br>
-      Jeweler in Training; from gold to customer, learning how to create,
-      cast, and finish a ring with a focus on quality and efficiency.
-      <br>
-      Experienced Vice President and Secretary with a demonstrated history of
-      working in the non-profit organization management industry.
-      <br><b>
-        Working towards career in Full-stack Development with an interest in Cyber Security
-      </b>
-      <br>
-      <br>
-      <b>Favorite book/tv show/movie:</b> Series of Unfortunate Events by
-      Lemony Snicket - Lilo and Stitch - Dune by Frank Herbert
-      <br />
-      <b>Interest/hobbies:</b> Crochet, Personal Development, Sculpting,
-      Crypto, Books, Plants, Jewelry making, mental health care, and nonprofit
-      management
-    </p>
+      <div class="scroll-downs" onclick="scrollToContent()">
+        <div class="mousey">
+          <div class="scroller"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="main-content">
+      <section id="projects">
+        <h2>Featured Projects</h2>
+        <div class="projects">
+          <div class="project-card">
+            <h3>Project 1</h3>
+            <p>Description of your first project. Highlight the key features and technologies used.</p>
+            <br>
+            <a href="https://www.example.com">
+              <button class="button-89 button-light" role="button">Button 89</button> </a>
+          </div>
+          <div class="project-card">
+            <h3>Project 2</h3>
+            <p>Description of your second project. Showcase your problem-solving abilities.</p>
+            <br>
+            <a href="https://www.example.com">
+              <button class="button-89 button-light" role="button">Button 89</button> </a>
+          </div>
+          <div class="project-card glow-on-hover">
+            <h3>Annoying Phone Input</h3>
+            <p>A JavaScript project with CSS funkiness.</p>
+            <br>
+            <a href="ProjectsPages/annoyingPhone.html">
+              <button class="button-89 button-light" role="button">Check it out!</button> </a>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <section style="text-align: center;">
+      <a href="ProjectsPages/ProjectLibrary.html">
+        <button class="button-89">View the full library</button>
+      </a>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="skills">
+        <span class="skill-tag">HTML5</span>
+        <span class="skill-tag">CSS3</span>
+        <span class="skill-tag">JavaScript</span>
+        <span class="skill-tag">React</span>
+        <span class="skill-tag">Node.js</span>
+        <span class="skill-tag">Git</span>
+        <span class="skill-tag">Responsive Design</span>
+        <span class="skill-tag">UI/UX</span>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Add your contact information and social media links here.</p>
+    </section>
+    <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200">
+      <rect width="300" height="200" fill="#f5f5f5" />
+
+      <circle r="12" fill="black">
+        <animateMotion dur="4s" repeatCount="indefinite"
+          path="M 30,40 L 250,150 L 100,30 L 200,180 L 50,100 L 270,40 L 30,40" keyPoints="0;0.2;0.4;0.6;0.8;1"
+          keyTimes="0;0.2;0.4;0.6;0.8;1" calcMode="linear" />
+      </circle>
+    </svg> -->
   </div>
 
   <div class="container">
-    <!--found on: https://mdbootstrap.com/docs/standard/navigation/footer/-->
-    <footer class="text-center text-white border-bottom" style="background-color: #f1f1f1">
-      <!-- Grid container -->
-      <div class="container pt-3">
-        <!-- Section: Social media -->
-        <section class="mb-4">
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="social-links">
           <!-- Facebook -->
-          <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="https://www.facebook.com/sena.uctuk/"
-            role="button" data-mdb-ripple-color="dark"><i class="fab fa-facebook-f"><img src="/img/facebook.svg"
-                alt="facebook" width="200%" /></i></a>
+          <a href="https://www.facebook.com/sena.uctuk/" class="social-btn facebook" target="_blank">
+            <i class="fab fa-facebook-f"></i>
+          </a>
 
           <!-- Instagram -->
-          <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="https://www.instagram.com/suctuk/"
-            role="button" data-mdb-ripple-color="dark"><i class="fab fa-instagram"><img src="/img/instagram.svg"
-                alt="instagram" width="200%" /></i></a>
+          <a href="https://www.instagram.com/suctuk/" class="social-btn instagram" target="_blank">
+            <i class="fab fa-instagram"></i>
+          </a>
 
-          <!-- Linkedin -->
-          <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="https://www.linkedin.com/in/suçtuk"
-            role="button" data-mdb-ripple-color="dark"><i class="fab fa-linkedin"><img src="/img/linkedin.svg"
-                alt="linkedin" width="200%" /></i></a>
+          <!-- LinkedIn -->
+          <a href="https://www.linkedin.com/in/suçtuk" class="social-btn linkedin" target="_blank">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+
           <!-- Github -->
-          <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="https://github.com/suctuk" role="button"
-            data-mdb-ripple-color="dark"><i class="fab fa-github"><img src="/img/github.svg" alt="github"
-                width="200%" /></i></a>
-        </section>
-        <!-- Section: Social media -->
+          <a href="https://github.com/suctuk" class="social-btn github" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+        <div class="footer-text">
+          <p>&copy; 2024 Your Name. All rights reserved.</p>
+        </div>
       </div>
-      <!-- Grid container -->
-
-      <!-- Copyright -->
-      <div class="text-center text-dark p-2" style="background-color: rgba(0, 0, 0, 0.2)">
-        © 2023
-        <a class="text-dark" href="https://www.Uctuk.com">Uctuk.com</a>
-      </div>
-      <!-- Copyright -->
     </footer>
   </div>
 </body>
