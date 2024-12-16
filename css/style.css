@@ -128,3 +128,71 @@ pre code {
   padding: 20px;
   border-radius: 20px;
 }
+
+
+/* Media query for mobile devices */
+@media screen and (max-width: 768px) {
+  .nav {
+    position: fixed;
+    bottom: -200px; /* Start hidden below the viewport */
+    left: 0;
+    right: 0;
+    top: auto;
+    transform: none;
+    display: flex;
+    justify-content: space-around;
+    background-color: #373B44;
+    padding: 10px;
+    transition: bottom 0.3s ease;
+  }
+
+  /* Show nav when user scrolls or hovers */
+  .nav:hover,
+  body:not(.at-top) .nav {
+    bottom: 0;
+  }
+
+  .nav-item {
+    width: auto;
+    height: 40px;
+    margin: 0;
+    padding: 0 15px;
+    font-size: 0.9rem;
+    transform: none;
+    background-color: transparent;
+  }
+
+  .nav-item:hover {
+    transform: translateY(-5px);
+    background-color: #5a5a5a;
+  }
+
+  /* Adjust hero section spacing for mobile */
+  .hero {
+    padding-bottom: 80px; /* Add space for the navigation */
+  }
+
+  .about {
+    margin-bottom: 60px; /* Add space above the mousey */
+  }
+
+  /* Adjust mousey position */
+  .scroll-downs {
+    bottom: 80px; /* Increased bottom spacing */
+  }
+
+  /* Ensure text doesn't get covered */
+  .hero p {
+    margin-bottom: 100px; /* Add space above mousey */
+  }
+}
+
+/* Add this to your existing CSS */
+body {
+  scroll-behavior: smooth;
+}
+
+/* Add a class to handle nav visibility based on scroll */
+body.at-top .nav {
+  bottom: -200px;
+}
