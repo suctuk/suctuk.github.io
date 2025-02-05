@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSEL - Computer Science Educational Laboratory</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/CSEL/assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navigation -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="/CSEL/index.html">
+                <img src="/CSEL/assets/images/cu-boulder-logo-text-white.svg" alt="CU Boulder CSEL Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/CSEL/index.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.colorado.edu/cs/faculty-staff-directory">Faculty</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/CSEL/pages/ambassadors.html">CSEL Ambassadors</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/CSEL/pages/room-reserve.html">Reserve A Room</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/CSEL/pages/lab-environment.html">Lab Environment</a>
+                    </li>
+                </ul>
+                <div class="search-container">
+                    <input type="text" class="form-control" id="searchInput" placeholder="Search CSEL...">
+                    <div id="searchResults"></div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Carousel -->
+    <div id="mainCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="2"></button>
+            <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="3"></button>
+        </div>
+        <div class="carousel-inner">
+            <!-- Slide 1 -->
+            <div class="carousel-item active">
+                <img src="/CSEL/assets/images/Corner.png" alt="CSEL Welcome">
+                <div class="carousel-content">
+                    <h2>Welcome to CSEL</h2>
+                    <p>Your home for computer science education and community at CU Boulder. Join us in creating an
+                        inspiring learning environment.</p>
+                    <a href="/about" class="carousel-btn">Learn More</a>
+                </div>
+            </div>
+            <!-- Slide 2 -->
+            <div class="carousel-item">
+                <img src="/api/placeholder/1920/1080" alt="Student Projects">
+                <div class="carousel-content">
+                    <h2>Student Project Spotlight</h2>
+                    <p>Discover innovative projects created by our talented CS students. From AI to web development, see
+                        what's possible at CSEL.</p>
+                    <a href="/CSEL/pages/projects.html" class="carousel-btn">View Projects</a>
+                </div>
+            </div>
+            <!-- Slide 3 -->
+            <div class="carousel-item">
+                <img src="/api/placeholder/1920/1080" alt="CSEL Events">
+                <div class="carousel-content">
+                    <h2>Upcoming Events</h2>
+                    <p>Join us for workshops, office hours, and community gatherings. Build your skills and connect with
+                        fellow students.</p>
+                    <a href="/events" class="carousel-btn">See Calendar</a>
+                </div>
+            </div>
+            <!-- Slide 4 -->
+            <div class="carousel-item">
+                <img src="/api/placeholder/1920/1080" alt="Self Care">
+                <div class="carousel-content">
+                    <h2>Self-Care Corner</h2>
+                    <p>Your wellbeing matters! Find resources and tips for maintaining a healthy work-life balance while
+                        pursuing your CS degree.</p>
+                    <a href="/resources" class="carousel-btn">Get Tips</a>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <h2>Latest Updates</h2>
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title">Office Hours Schedule</h5>
+                        <p class="card-text">Check out the updated office hours schedule for Fall 2024.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <h2>Quick Links</h2>
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <a href="#">Room Reservations</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="#">Project Showcase</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="#">Event Calendar</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>Contact Us</h5>
+                    <p>Email: csel@colorado.edu</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Location</h5>
+                    <p>ECCR Engineering Center<br>University of Colorado Boulder</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Follow Us</h5>
+                    <div class="social-links">
+                        <!-- Add social media links here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <script src="/CSEL/assets/js/search.js"></script>
+
+</body>
+
+</html>

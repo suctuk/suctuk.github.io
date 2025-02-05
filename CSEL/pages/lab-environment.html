@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSEL - Computer Science Educational Laboratory</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/CSEL/assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="/CSEL/index.html">
+                <img src="/CSEL/assets/images/cu-boulder-logo-text-white.svg" alt="CU Boulder CSEL Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/CSEL/index.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.colorado.edu/cs/faculty-staff-directory">Faculty</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/CSEL/pages/ambassadors.html">CSEL Ambassadors</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/CSEL/pages/room-reserve.html">Reserve A Room</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/CSEL/pages/lab-environment.html">Lab Environment</a>
+                    </li>
+                </ul>
+                <div class="search-container">
+                    <input type="text" class="form-control" id="searchInput" placeholder="Search CSEL...">
+                    <div id="searchResults"></div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <br>
+                <h2>Latest Updates</h2>
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title">Education Lab Remote Access</h5>
+                        <p class="card-text">The remote lab is a legacy set of hosts for general remote work. In order to connect; the UCB VPN is required.<br>
+                            This service is deprecated, it is recommended to use newer cloud computing resources offered by the department. <br>
+                            Student websites will remain but the compute nodes may be decommissioned in the future.
+                            <br><br>
+                            All <b>active</b> IdentiKey users on the CSCI career track have access to this service. SSH into elra.cs.colorado.edu, which consist of the following hosts running Ubuntu 20.04:
+                            <br><br>
+                            elra-01.cs.colorado.edu<br>
+                            elra-02.cs.colorado.edu<br>
+                            elra-03.cs.colorado.edu<br>
+                            elra-04.cs.colorado.edu<br>
+                            You can either SSH into the round-robin address (elra.cs.colorado.edu) or directly into a specific node. All nodes share the same home directory.
+                            <br><br>
+                            In addition, there is a separate node that runs Red Hat Enterprise Linux 7.
+                            <br><br>                            
+                            elra-sql.cs.colorado.edu<br>
+                            A shell can be set globally in the <a href="https://identikey.colorado.edu/choose_shell.html">IdentiKey Portal</a>. This is /bin/bash by default.
+                            <br><br>
+                            <b>Data Retention Policy</b> <br>
+                            All data saved to your home directory is retained as long as your IdentiKey remains <b>active</b> (enrolled in some course) or if you have a public_html directory present.
+                            <br><br>
+                            Once you are no longer active with CU Boulder, data is retained for one academic year following your last semester. It will then be archived and no longer accessible. If you have a public_html directory, that will be retained indefinitely.
+                            <br><br>
+                            Please contact us for data retrieval requests from the archive.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <br>
+                <h2>Quick Links</h2>
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <a href="#">Room Reservations</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="#">Project Showcase</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="#">Event Calendar</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>Contact Us</h5>
+                    <p>Email: csel@colorado.edu</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Location</h5>
+                    <p>ECCR Engineering Center<br>University of Colorado Boulder</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Follow Us</h5>
+                    <div class="social-links">
+                        <!-- Add social media links here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
