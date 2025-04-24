@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RX Remedy - Automatic Pill Dispenser</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Source+Serif+Pro&family=Source+Code+Pro&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="container header-container">
+            <h1 class="logo">RX Remedy</h1>
+            <nav>
+                <a href="#hero">Home</a>
+                <a href="#overview">Overview</a>
+                <a href="#evolution">Evolution</a>
+                <a href="#technical">Technical Details</a>
+                <a href="#demo">Demo</a>
+                <a href="#future">Future Development</a>
+                <a href="#resources">Resources</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <div class="theme-toggle">
+                <label class="switch">
+                    <input type="checkbox" id="themeToggle">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+        </div>
+    </header>
+
+    <section id="hero" class="hero">
+        <div class="container">
+            <h1>RX Remedy - Automatic Pill Dispenser</h1>
+            <p>Revolutionizing medication adherence with a smart, reliable pill dispensing system</p>
+            <div class="badge">1st Place: Patient Outcome and Safety</div>
+        </div>
+    </section>
+
+    <section id="overview" class="section">
+        <div class="container">
+            <h2>Problem & Solution Overview</h2>
+            <div class="flex-container">
+                <div class="column">
+                    <h3>The Challenge</h3>
+                    <p>Medication non-adherence is a significant healthcare issue, particularly affecting:</p>
+                    <ul class="component-list">
+                        <li>Individuals with ADHD who struggle with daily medication routines</li>
+                        <li>Seniors managing complex medication schedules</li>
+                        <li>Patients with chronic conditions requiring consistent medication</li>
+                        <li>Caregivers who need to monitor medication compliance remotely</li>
+                    </ul>
+                    <p>According to healthcare studies, missed medications lead to poorer health outcomes, increased
+                        hospitalizations, and higher healthcare costs.</p>
+                </div>
+                <div class="column">
+                    <h3>Our Solution: RX Remedy</h3>
+                    <p>RX Remedy addresses these challenges through innovative hardware-software integration:</p>
+                    <ul class="component-list">
+                        <li>14-slot rotating wheel mechanism ensuring timely, single-dose dispensing</li>
+                        <li>Integrated distance sensor to detect pill presence</li>
+                        <li>Smart LED notification system for pill reminders</li>
+                        <li>Automatic rotation every 12 hours (customizable)</li>
+                        <li>Prevention of double-dosing through automated scheduling</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="wheel-animation">
+                <div class="wheel" id="wheel">
+                    <!-- Compartments will be added via JavaScript -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="evolution" class="section">
+        <div class="container">
+            <h2>Project Evolution</h2>
+
+            <div class="flex-container">
+                <div class="column">
+                    <h3>Hackathon Version</h3>
+                    <div class="image-container">
+                        <img src="/api/placeholder/600/400" alt="Hackathon prototype">
+                    </div>
+                    <p>Our journey began at a healthcare hackathon, where our team of three members combined diverse
+                        skills:</p>
+                    <ul class="component-list">
+                        <li>Sena: Hardware development and Arduino programming</li>
+                        <li>Yash: Software development and medication management systems</li>
+                        <li>Kelsea: User experience design and cross-disciplinary integration</li>
+                    </ul>
+                    <p>The initial prototype featured a basic rotating mechanism and simple LED indicators. Despite time
+                        constraints, our focus on solving a real healthcare problem earned us first place in the Patient
+                        Outcome and Safety category.</p>
+                </div>
+
+                <div class="column">
+                    <h3>Class Iteration</h3>
+                    <div class="image-container">
+                        <img src="/api/placeholder/600/400" alt="Class iteration prototype">
+                    </div>
+                    <p>For the "How to Hack Anything" class, we significantly enhanced the initial concept:</p>
+                    <ul class="component-list">
+                        <li>Upgraded from Arduino Nano to Elegoo r3 for enhanced functionality</li>
+                        <li>Integrated the VL53L4CD distance sensor for pill detection</li>
+                        <li>Implemented a sophisticated state machine for more reliable operation</li>
+                        <li>Enhanced the LED logic with multiple indicator states</li>
+                        <li>Optimized 3D printed components for durability and aesthetics</li>
+                    </ul>
+                    <p>This iteration transformed a proof-of-concept into a practical, reliable medication management
+                        solution.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="technical" class="section">
+        <div class="container">
+            <h2>Technical Deep Dive</h2>
+
+            <h3>Hardware Components</h3>
+            <div class="flex-container">
+                <div class="column">
+                    <h4>3D Printed Components</h4>
+                    <ul class="component-list">
+                        <li>14-slot rotating wheel (3-hour print time)</li>
+                        <li>Wheel holder (3-hour print time)</li>
+                        <li>Optimized base (1-hour print time)</li>
+                        <li>Materials: PLA with wood and copper aesthetic</li>
+                    </ul>
+
+                    <div class="model-viewer">
+                        <img src="/api/placeholder/800/500" alt="3D model of dispenser">
+                        <div class="model-controls">
+                            <button class="button">Rotate</button>
+                            <button class="button">Explode View</button>
+                            <button class="button">Reset</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="column">
+                    <h4>Electronic Components</h4>
+                    <ul class="component-list">
+                        <li>Arduino/Elegoo r3 microcontroller</li>
+                        <li>28BYJ-48 Stepper Motor with ULN2003 Driver</li>
+                        <li>Sparkfun VL53L4CD Distance Sensor</li>
+                        <li>LED indicator system</li>
+                        <li>Breadboard for prototyping</li>
+                        <li>Connecting wires</li>
+                    </ul>
+
+                    <div class="image-container">
+                        <img src="/api/placeholder/600/400" alt="Electronic components layout">
+                    </div>
+                </div>
+            </div>
+
+            <h3>Software/Firmware</h3>
+            <p>The pill dispenser uses a state machine architecture to manage various operational states based on pill
+                presence and time intervals:</p>
+
+            <div class="tabs">
+                <div class="tab active" data-tab="main-code">Main Code</div>
+                <div class="tab" data-tab="state-machine">State Machine</div>
+                <div class="tab" data-tab="sensor">Sensor Functions</div>
+            </div>
+
+            <div class="code-container">
+                <div class="tab-content active" id="main-code">
+                    <div class="code-header">
+                        <span>pill_dispenser.ino</span>
+                        <span>Arduino C++</span>
+                    </div>
+                    <pre><code class="language-cpp">/*
+ * Automatic Pill Dispenser
+ * 
+ * This program controls an automatic pill dispenser with the following features:
+ * - Rotates a 14-compartment wheel using a stepper motor every 12 hours
+ * - Uses a distance sensor to detect if pills are present after rotation
+ * - LED behavior:
+ *   - If pills present: LED turns on after 5 minutes if pills not taken, turns off when taken
+ *   - If no pills: LED flashes for 2 hours, then turns off until next rotation
+ */
+
+#include &lt;Stepper.h&gt;
+#include &lt;Wire.h&gt;
+#include "SparkFun_VL53L1X.h" // Using existing library for VL53L1X which is compatible
+
+// Define pins
+#define LED_PIN 13
+#define SHUTDOWN_PIN 2
+#define INTERRUPT_PIN 3
+
+// Define steps per rotation (manufacturer specs for 28BYJ-48)
+const int STEPS_PER_REVOLUTION = 2048; // 32 steps per revolution * 64:1 gear ratio
+const int STEPS_PER_COMPARTMENT = STEPS_PER_REVOLUTION / 14; // For 14 compartments
+
+// Define timing
+const unsigned long TWELVE_HOURS_MS = 30000; // 12 hours in milliseconds: 43200000
+const unsigned long PILL_REMINDER_TIMEOUT = 15000; // 5 minutes in milliseconds: 300000
+const unsigned long NO_PILLS_FLASH_DURATION = 20000; // 2 hours in milliseconds: 7200000
+const unsigned long PILL_CHECK_INTERVAL = 3000; // Check for pills every 5 seconds
+const unsigned long LED_FLASH_INTERVAL = 500; // LED flash interval for "no pills" warning
+
+// Initialize the stepper motor
+Stepper pillStepper(STEPS_PER_REVOLUTION, 9, 10, 11, 12);
+
+// Initialize the distance sensor
+SFEVL53L1X distanceSensor;
+
+// Main setup function
+void setup() {
+  // Initialize serial communication
+  Serial.begin(9600);
+  Serial.println("Automatic Pill Dispenser Initializing...");
+  
+  // Initialize stepper motor speed
+  pillStepper.setSpeed(8); // Set lower speed for stability
+
+  // Initialize LED pin
+  pinMode(LED_PIN, OUTPUT);
+
+  // Initialize I2C communication
+  Wire.begin();
+  
+  // Initialize distance sensor
+  if (distanceSensor.begin() != 0) {
+    Serial.println("Distance sensor failed to initialize. Check wiring.");
+  } else {
+    Serial.println("Distance sensor initialized.");
+    // Configure the sensor
+    distanceSensor.setDistanceModeLong();
+    distanceSensor.setTimingBudgetInMs(50);
+    distanceSensor.setIntermeasurementPeriod(100);
+  }
+
+  // Start with LED off
+  digitalWrite(LED_PIN, LOW);
+  
+  // Record current time for rotation timing
+  lastRotationTime = millis();
+  lastPillCheckTime = millis();
+  stateEntryTime = millis();
+  
+  Serial.println("Initialization complete. Pill dispenser ready.");
+}</code></pre>
+                </div>
+
+                <div class="tab-content" id="state-machine">
+                    <div class="code-header">
+                        <span>state_machine.ino</span>
+                        <span>Arduino C++</span>
+                    </div>
+                    <pre><code class="language-cpp">// Enum for system state
+enum SystemState {
+  IDLE,               // Waiting for next rotation
+  PILLS_PRESENT,      // Pills present in compartment
+  PILLS_REMINDER_ON,  // Pills present, reminder LED on
+  NO_PILLS_WARNING,   // No pills detected, LED flashing
+  NO_PILLS_IDLE       // No pills, after flash duration
+};
+
+// System variables
+SystemState currentState = IDLE;
+bool ledState = false;
+bool ledFlashing = false;
+unsigned long lastLedToggle = 0;
+unsigned long lastRotationTime = 0;
+unsigned long lastPillCheckTime = 0;
+unsigned long stateEntryTime = 0;   // Time when current state was entered
+
+// Main loop function with state machine
+void loop() {
+  unsigned long currentTime = millis();
+  
+  // Handle LED flashing if active
+  if (ledFlashing && (currentTime - lastLedToggle >= LED_FLASH_INTERVAL)) {
+    ledState = !ledState;
+    digitalWrite(LED_PIN, ledState ? HIGH : LOW);
+    lastLedToggle = currentTime;
+  }
+  
+  // Check if it's time to rotate the dispenser (every 12 hours)
+  if (currentTime - lastRotationTime >= TWELVE_HOURS_MS) {
+    Serial.println("12 hours elapsed. Rotating pill dispenser...");
+    
+    // Rotate the wheel by one compartment
+    rotateOneCompartment();
+    
+    // Update the rotation time
+    lastRotationTime = currentTime;
+    
+    // Check if pills are present after rotation
+    delay(5000); // Wait for things to settle
+    checkPillsAfterRotation();
+  }
+  
+  // State machine for different scenarios
+  switch (currentState) {
+    case IDLE:
+      // Just waiting for next rotation
+      break;
+      
+    case PILLS_PRESENT:
+      // Pills are present, check if they've been taken
+      if (currentTime - lastPillCheckTime >= PILL_CHECK_INTERVAL) {
+        lastPillCheckTime = currentTime;
+        
+        // Check if pills are still present
+        if (!arePillsPresent()) {
+          // Pills have been taken
+          Serial.println("Pills have been taken!");
+          transitionToState(IDLE);
+          break;
+        }
+        
+        // Check if reminder timeout has elapsed
+        if (currentTime - stateEntryTime >= PILL_REMINDER_TIMEOUT) {
+          Serial.println("Pills not taken within 5 minutes! Turning on reminder LED.");
+          transitionToState(PILLS_REMINDER_ON);
+        }
+      }
+      break;
+      
+    // Other states handled similarly...
+  }
+  
+  // Small delay to prevent excessive CPU usage
+  delay(100);
+}</code></pre>
+                </div>
+
+                <div class="tab-content" id="sensor">
+                    <div class="code-header">
+                        <span>sensor_functions.ino</span>
+                        <span>Arduino C++</span>
+                    </div>
+                    <pre><code class="language-cpp">// Function to check if pills are present
+bool arePillsPresent() {
+  int distance = getDistance();
+  
+  Serial.print("Current distance: ");
+  Serial.print(distance);
+  Serial.println(" mm");
+  
+  // Pills are present if distance is small
+  return (distance < PILLS_PRESENT_THRESHOLD);
+}
+
+// Function to check if pills have been taken
+bool havePillsBeenTaken() {
+  int distance = getDistance();
+  
+  // Pills have been taken if distance is medium (greater than threshold)
+  return (distance > PILLS_TAKEN_THRESHOLD);
+}
+
+// Function to get distance reading from sensor
+int getDistance() {
+  distanceSensor.startRanging();
+  
+  int timeout = 0;
+  while (!distanceSensor.checkForDataReady() && timeout < 100) {
+    delay(1);
+    timeout++;
+  }
+  
+  if (timeout >= 100) {
+    Serial.println("Sensor timeout!");
+    return -1; // Error value
+  }
+  
+  int distance = distanceSensor.getDistance(); // Get distance in mm
+  
+  distanceSensor.clearInterrupt();
+  distanceSensor.stopRanging();
+  
+  return distance;
+}
+
+// Function to transition to a new state
+void transitionToState(SystemState newState) {
+  // Exit actions for current state
+  switch (currentState) {
+    case PILLS_REMINDER_ON:
+      // Turn off steady LED
+      digitalWrite(LED_PIN, LOW);
+      break;
+      
+    case NO_PILLS_WARNING:
+      // Stop flashing
+      ledFlashing = false;
+      digitalWrite(LED_PIN, LOW);
+      break;
+  }
+  
+  // Enter actions for new state
+  switch (newState) {
+    case IDLE:
+      Serial.println("Entering IDLE state");
+      // Make sure LED is off
+      digitalWrite(LED_PIN, LOW);
+      ledFlashing = false;
+      break;
+      
+    // Other state transitions handled similarly...
+  }
+  
+  // Update state and record entry time
+  currentState = newState;
+  stateEntryTime = millis();
+}</code></pre>
+                </div>
+            </div>
+
+            <div class="state-diagram" id="stateDiagram">
+                <div class="state" id="stateIdle">IDLE</div>
+                <div class="state" id="statePillsPresent">PILLS_PRESENT</div>
+                <div class="state" id="statePillsReminder">PILLS_REMINDER_ON</div>
+                <div class="state" id="stateNoPillsWarning">NO_PILLS_WARNING</div>
+                <div class="state" id="stateNoPillsIdle">NO_PILLS_IDLE</div>
+
+                <!-- Arrows connecting states will be styled with CSS -->
+                <div class="state-arrow arrow1"></div>
+                <div class="state-arrow arrow2"></div>
+                <div class="state-arrow arrow3"></div>
+                <div class="state-arrow arrow4"></div>
+                <div class="state-arrow arrow5"></div>
+            </div>
+
+            <p>The state machine architecture allows the dispenser to respond intelligently to different scenarios:</p>
+            <ul class="component-list">
+                <li><strong>IDLE:</strong> Waiting for the next scheduled rotation</li>
+                <li><strong>PILLS_PRESENT:</strong> Pills detected in the current compartment</li>
+                <li><strong>PILLS_REMINDER_ON:</strong> Pills not taken after timeout, LED reminder activated</li>
+                <li><strong>NO_PILLS_WARNING:</strong> Empty compartment detected, LED flashing as warning</li>
+                <li><strong>NO_PILLS_IDLE:</strong> After warning period, system enters low-power waiting state</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="demo" class="section">
+        <div class="container">
+            <h2>Demo & Operation</h2>
+
+            <div class="flex-container">
+                <div class="column">
+                    <h3>How It Works</h3>
+                    <ol>
+                        <li>Fill the 14 compartments of the wheel with medication</li>
+                        <li>The system rotates the wheel at scheduled intervals (default: every 12 hours)</li>
+                        <li>After rotation, the distance sensor checks if pills are present</li>
+                        <li>If pills are detected but not taken within 5 minutes, the LED turns on as a reminder</li>
+                        <li>The LED turns off when pills are taken</li>
+                        <li>If no pills are detected, the LED flashes for 2 hours to indicate an empty compartment</li>
+                    </ol>
+
+                    <h3>LED Indicator Guide</h3>
+                    <div class="led-indicator-container">
+                        <div class="led-indicator">
+                            <p><strong>LED Off</strong></p>
+                            <div class="led"></div>
+                            <p>Pills taken or idle state</p>
+                        </div>
+                        <div class="led-indicator">
+                            <p><strong>LED On</strong></p>
+                            <div class="led on"></div>
+                            <p>Pills not taken (reminder)</p>
+                        </div>
+                        <div class="led-indicator">
+                            <p><strong>LED Flashing</strong></p>
+                            <div class="led flash"></div>
+                            <p>No pills detected</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="column">
+                    <h3>Demonstration Video</h3>
+                    <div class="video-container">
+                        <div class="video-placeholder">
+                            <p>Video Demonstration Placeholder</p>
+                        </div>
+                    </div>
+                    <p>The video shows the complete pill dispensing cycle, including wheel rotation, pill detection, and
+                        LED indicator behavior.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="future" class="section">
+        <div class="container">
+            <h2>Future Development</h2>
+
+            <div class="flex-container">
+                <div class="column">
+                    <h3>Planned Enhancements</h3>
+                    <ul class="component-list">
+                        <li><strong>Buzzer or Bluetooth Alarm:</strong> Audio notification when pills haven't been taken
+                        </li>
+                        <li><strong>Custom Alarm Times:</strong> User-programmable scheduling beyond fixed intervals
+                        </li>
+                        <li><strong>External Power Supply:</strong> Wall plug integration for reliable power</li>
+                        <li><strong>Mobile App Integration:</strong> Remote monitoring and notification system</li>
+                        <li><strong>Improved Sensors:</strong> Enhanced detection accuracy and reliability</li>
+                        <li><strong>Multiple Medication Support:</strong> Managing complex medication regimens</li>
+                    </ul>
+                </div>
+
+                <div class="column">
+                    <h3>Concept Visualization</h3>
+                    <div class="image-container">
+                        <img src="/api/placeholder/600/400" alt="Future concept visualization">
+                    </div>
+                    <p>Our future vision includes a more compact design, improved user interface, and enhanced
+                        connectivity options for caregiver monitoring.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="resources" class="section">
+        <div class="container">
+            <h2>Technical Resources</h2>
+
+            <div class="resources-list">
+                <div class="resource-card">
+                    <h4>3D Models</h4>
+                    <p>STL files for 3D printing the pill dispenser components</p>
+                    <a href="#" class="download-link">Download Files</a>
+                </div>
+
+                <div class="resource-card">
+                    <h4>Arduino Code</h4>
+                    <p>Complete source code for the pill dispenser firmware</p>
+                    <a href="#" class="download-link">Download Code</a>
+                </div>
+
+                <div class="resource-card">
+                    <h4>Schematics</h4>
+                    <p>Electronic circuit diagrams and wiring instructions</p>
+                    <a href="#" class="download-link">Download Schematics</a>
+                </div>
+
+                <div class="resource-card">
+                    <h4>Bill of Materials</h4>
+                    <p>Complete list of components with sourcing information</p>
+                    <a href="#" class="download-link">Download BOM</a>
+                </div>
+
+                <div class="resource-card">
+                    <h4>Assembly Guide</h4>
+                    <p>Step-by-step instructions for building your own pill dispenser</p>
+                    <a href="#" class="download-link">Download Guide</a>
+                </div>
+
+                <div class="resource-card">
+                    <h4>Presentation PDF</h4>
+                    <p>Hackathon presentation slides and project overview</p>
+                    <a href="#" class="download-link">Download Presentation</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <div class="container">
+            <h2>Contact & Credits</h2>
+
+            <div class="flex-container">
+                <div class="column">
+                    <h3>Project Team</h3>
+                    <ul class="component-list">
+                        <li><strong>Sena U:</strong> Hardware Development, 3D Modeling, Arduino Programming</li>
+                        <li><strong>Yash:</strong> Software Development, Web Interface, System Architecture</li>
+                        <li><strong>Kelsea:</strong> UX Design, Documentation, Cross-functional Integration</li>
+                    </ul>
+
+                    <h3>Acknowledgments</h3>
+                    <p>Special thanks to our mentors, the hackathon organizers, and the "How to Hack Anything" course
+                        instructors for their guidance and support throughout this project.</p>
+                </div>
+
+                <div class="column">
+                    <h3>Get in Touch</h3>
+                    <p>Interested in collaborating, contributing, or learning more about the RX Remedy project? Reach
+                        out to us!</p>
+
+                    <div class="contact-links">
+                        <a href="mailto:contact@rxremedy.com">Email</a>
+                        <a href="#">GitHub</a>
+                        <a href="#">LinkedIn</a>
+                        <a href="#">Twitter</a>
+                    </div>
+
+                    <h3>Related Projects</h3>
+                    <ul class="component-list">
+                        <li><a href="#">SmartHome Medical Integration</a></li>
+                        <li><a href="#">Healthcare IoT Platform</a></li>
+                        <li><a href="#">Assistive Technology Collection</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 RX Remedy Project Team. All rights reserved.</p>
+            <p>This project was created as part of a healthcare hackathon and further developed in the "How to Hack
+                Anything" class.</p>
+        </div>
+    </footer>
+
+    <a href="#hero" class="back-to-top" id="backToTop">↑</a>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-cpp.min.js"></script>
+    <script src="scripts.js" defer></script>
+</body>
+
+</html>
