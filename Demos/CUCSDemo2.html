@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in - Google Accounts</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f9f9f9;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        
+        .demo-warning {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background: #ff4444;
+            color: white;
+            padding: 15px 20px;
+            border-radius: 8px;
+            font-weight: bold;
+            box-shadow: 0 4px 12px rgba(255, 68, 68, 0.3);
+            z-index: 1000;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        
+        .fake-url {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: #f8f9fa;
+            padding: 8px 16px;
+            border-bottom: 1px solid #dee2e6;
+            font-family: 'Courier New', monospace;
+            font-size: 12px;
+            color: #666;
+            z-index: 999;
+        }
+        
+        .main-container {
+            background: white;
+            border: 1px solid #dadce0;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 48px 40px 36px;
+            width: 100%;
+            max-width: 450px;
+            text-align: center;
+            margin-top: 30px;
+        }
+        
+        .google-logo {
+            margin-bottom: 24px;
+        }
+        
+        .google-logo svg {
+            width: 75px;
+            height: 24px;
+        }
+        
+        .title {
+            font-size: 24px;
+            font-weight: 400;
+            color: #202124;
+            margin-bottom: 8px;
+        }
+        
+        .subtitle {
+            font-size: 16px;
+            color: #5f6368;
+            line-height: 1.5;
+            margin-bottom: 24px;
+        }
+        
+        .form-group {
+            margin-bottom: 24px;
+            text-align: left;
+        }
+        
+        .form-group label {
+            display: block;
+            font-size: 14px;
+            color: #1a73e8;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+        
+        .form-group input {
+            width: 100%;
+            padding: 13px 15px;
+            border: 1px solid #dadce0;
+            border-radius: 4px;
+            font-size: 16px;
+            transition: border-color 0.2s ease;
+            outline: none;
+        }
+        
+        .form-group input:focus {
+            border-color: #1a73e8;
+            box-shadow: 0 0 0 1px #1a73e8;
+        }
+        
+        .forgot-email {
+            display: block;
+            color: #1a73e8;
+            font-size: 14px;
+            text-decoration: none;
+            margin-top: 8px;
+        }
+        
+        .forgot-email:hover {
+            text-decoration: underline;
+        }
+        
+        .guest-mode {
+            margin: 24px 0;
+            padding: 16px;
+            background: #f8f9fa;
+            border-radius: 4px;
+            font-size: 14px;
+            color: #5f6368;
+            text-align: left;
+        }
+        
+        .guest-mode a {
+            color: #1a73e8;
+            text-decoration: none;
+        }
+        
+        .guest-mode a:hover {
+            text-decoration: underline;
+        }
+        
+        .form-actions {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 24px;
+        }
+        
+        .create-account {
+            color: #1a73e8;
+            font-size: 14px;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .create-account:hover {
+            text-decoration: underline;
+        }
+        
+        .next-btn {
+            background: #1a73e8;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            padding: 9px 23px;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+        
+        .next-btn:hover {
+            background: #1557b0;
+        }
+        
+        .footer {
+            margin-top: 48px;
+            padding: 0 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            max-width: 450px;
+        }
+        
+        .language-selector {
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+            color: #5f6368;
+            cursor: pointer;
+        }
+        
+        .language-selector::after {
+            content: '▼';
+            margin-left: 5px;
+            font-size: 10px;
+        }
+        
+        .footer-links {
+            display: flex;
+            gap: 24px;
+        }
+        
+        .footer-links a {
+            color: #5f6368;
+            font-size: 14px;
+            text-decoration: none;
+        }
+        
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="fake-url">🔒 https://accounts.google.com/signin/chrome/sync/identifier?ssp=1&continue=https%3A%2F%2Fwww.google.com%2F&flowName=GlifDesktopChromeSync</div>
+    
+    <div class="demo-warning">
+        ⚠️ PHISHING DEMO - FOR TRAINING ONLY
+    </div>
+    
+    <div class="main-container">
+        <div class="google-logo">
+            <svg viewBox="0 0 272 92" xmlns="http://www.w3.org/2000/svg">
+                <path fill="#4285f4" d="M115.75 47.18c0 12.77-9.99 22.18-22.25 22.18s-22.25-9.41-22.25-22.18C71.25 34.32 81.24 25 93.5 25s22.25 9.32 22.25 22.18zm-9.74 0c0-7.98-5.79-13.44-12.51-13.44S80.99 39.2 80.99 47.18c0 7.9 5.79 13.44 12.51 13.44s12.51-5.55 12.51-13.44z"/>
+                <path fill="#ea4335" d="M163.75 47.18c0 12.77-9.99 22.18-22.25 22.18s-22.25-9.41-22.25-22.18c0-12.85 9.99-22.18 22.25-22.18s22.25 9.32 22.25 22.18zm-9.74 0c0-7.98-5.79-13.44-12.51-13.44s-12.51 5.46-12.51 13.44c0 7.9 5.79 13.44 12.51 13.44s12.51-5.55 12.51-13.44z"/>
+                <path fill="#fbbc05" d="M209.75 26.34v39.82c0 16.38-9.66 23.07-21.08 23.07-10.75 0-17.22-7.19-19.66-13.07l8.48-3.53c1.51 3.61 5.21 7.87 11.17 7.87 7.31 0 11.84-4.51 11.84-13v-3.19h-.34c-2.18 2.69-6.38 5.04-11.68 5.04-11.09 0-21.25-9.66-21.25-22.09 0-12.52 10.16-22.26 21.25-22.26 5.29 0 9.49 2.35 11.68 4.96h.34v-3.61h9.25zm-8.56 20.92c0-7.81-5.21-13.52-11.84-13.52-6.72 0-12.35 5.71-12.35 13.52 0 7.73 5.63 13.36 12.35 13.36 6.63 0 11.84-5.63 11.84-13.36z"/>
+                <path fill="#34a853" d="M225 3v65h-9.5V3h9.5z"/>
+                <path fill="#ea4335" d="M262.02 54.48l7.56 5.04c-2.44 3.61-8.32 9.83-18.48 9.83-12.6 0-22.01-9.74-22.01-22.18 0-13.19 9.49-22.18 20.92-22.18 11.51 0 17.14 9.16 18.98 14.11l1.01 2.52-29.65 12.28c2.27 4.45 5.8 6.72 10.75 6.72 4.96 0 8.4-2.44 10.92-6.14zm-23.27-7.98l19.82-8.23c-1.09-2.77-4.37-4.7-8.23-4.7-4.95 0-11.84 4.37-11.59 12.93z"/>
+            </svg>
+        </div>
+        
+        <h1 class="title">Sign in to Chrome</h1>
+        <p class="subtitle">
+            Sign in with your Google Account to get your<br>
+            bookmarks, history, passwords, and other settings<br>
+            on all your devices
+        </p>
+        
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="email">Email or phone</label>
+                <input type="text" id="email" name="email" required>
+                <a href="#" class="forgot-email">Forgot email?</a>
+            </div>
+            
+            <div class="guest-mode">
+                Not your computer? Use Guest mode to sign in privately.<br>
+                <a href="#">Learn more</a>
+            </div>
+            
+            <div class="form-actions">
+                <a href="#" class="create-account">Create account</a>
+                <button type="submit" class="next-btn">Next</button>
+            </div>
+        </form>
+    </div>
+    
+    <div class="footer">
+        <div class="language-selector">English (United States)</div>
+        <div class="footer-links">
+            <a href="#">Help</a>
+            <a href="#">Privacy</a>
+            <a href="#">Terms</a>
+        </div>
+    </div>
+    
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('🎯 CAUGHT! This was a phishing attempt!\n\nThis fake Google login page would have stolen your credentials.\n\nAlways check the URL carefully - notice the suspicious domain in the address bar!');
+        });
+    </script>
+</body>
+</html>
