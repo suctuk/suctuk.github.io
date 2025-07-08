@@ -14,7 +14,7 @@
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            background: #ffffff;
             min-height: 100vh;
             display: flex;
             justify-content: center;
@@ -35,7 +35,6 @@
         .login-container {
             background: white;
             border-radius: 12px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
             padding: 40px;
             width: 100%;
             max-width: 400px;
@@ -171,23 +170,18 @@
 </head>
 
 <body>
-    <div class="fake-url">🔒 https://salto-space-login.secure-hotels.com/proaccess/login</div>
+    <!-- <div class="fake-url">🔒 https://salto-space-login.secure-hotels.com/proaccess/login</div>
 
     <div class="demo-warning">
         ⚠️ PHISHING DEMO - FOR TRAINING ONLY
-    </div>
+    </div> -->
 
-    <div class="background-pattern"></div>
+    <div class="background-pattern" style="background-image: url('img/gradientTop.png'); background-position: top; background-size: 100% auto; background-repeat: no-repeat; opacity: 1; position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;"></div>
+    <div class="background-pattern" style="background-image: url('img/sideimage.png'); background-position: left; background-size: 100% auto; background-repeat: no-repeat; opacity: 1; position: absolute; top: 3vw; left: 0; width: 37%; height: 100%; z-index: -1;"></div>
 
     <div class="login-container">
-        <div class="logo">
-            <div class="logo-icon"></div>
-            <div class="logo-text">SALTO Space</div>
-        </div>
-
-        <div class="welcome-text">
-            Welcome to <span class="highlight">ProAccess</span><br>
-            <small>SECURE</small>
+        <div class="logo-container" style="text-align: center; margin-bottom: 30px;">
+            <img src="img/SaltoHeader.png" alt="SALTO Space ProAccess" style="max-width: 100%; height: auto;">
         </div>
 
         <form id="loginForm">
